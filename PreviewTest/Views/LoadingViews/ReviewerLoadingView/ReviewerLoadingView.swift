@@ -8,11 +8,44 @@
 import SwiftUI
 
 struct ReviewerLoadingView: View {
+    
+    @Binding var value: Double
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.black
+                .ignoresSafeArea()
+            LogoReviewerLoadingView()
+            CustomProgressView(value: $value)
+        }
+        .onAppear {
+            stroke {
+                self.value += 0.25
+                stroke {
+                    self.value += 0.25
+                    stroke {
+                        self.value += 0.25
+                        stroke {
+                            self.value += 0.25
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func stroke(_ completion: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            completion()
+        }
     }
 }
 
-#Preview {
-    ReviewerLoadingView()
+struct ReviewerLoadingView_Preview: PreviewProvider {
+    
+    @State static var value: Double = 0
+    
+    static var previews: some View {
+        ReviewerLoadingView(value: $value)
+    }
 }

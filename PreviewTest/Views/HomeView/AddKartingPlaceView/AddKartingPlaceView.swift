@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct AddKartingPlaceView: View {
+    
+    @State var showAddKartingPlaceView: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ZStack {
+                Color.bgMain
+                AddView(title: "Add the data", description: "Indicate basic information", buttonTitle: "Add information", showBackground: true) {
+                    
+                }
+            }
+            .frame(height: 320)
+            Spacer()
+        }
+        .ignoresSafeArea()
     }
 }
 

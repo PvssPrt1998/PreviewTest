@@ -20,15 +20,15 @@ struct NextButton: View {
                 HStack {
                     Spacer()
                     Text("Next")
-                        .font(Font(UIFont.fontWith(size: 14, weight: .bold)))
-                    .foregroundColorCustom(.white)
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundColorCustom(.white)
                     Spacer()
                 }
                 Spacer()
             }
         }
         .frame(width: 160, height: 45)
-        .background(Color.specialBlue)
+        .background(Color.appPrimary)
         .clipShape(.rect(cornerRadius: 18))
     }
 }

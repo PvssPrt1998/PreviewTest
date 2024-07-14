@@ -9,13 +9,13 @@ import SwiftUI
 
 struct EmployeeAddView: View {
     
-    var viewModel: EmployeeAddViewModel
+    @ObservedObject var viewModel: EmployeeAddViewModel
     
     var body: some View {
-        BackgroundContainerView(globalHorizontalPadding: , content: <#T##() -> View#>)
+        AddItemView(title: "New employee", buttonTitle: "Add", textFields: $viewModel.textFields)
     }
 }
 
 #Preview {
-    EmployeeAddView()
+    EmployeeAddView(viewModel: EmployeeAddViewModel())
 }

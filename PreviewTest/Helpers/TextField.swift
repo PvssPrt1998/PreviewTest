@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct TextField {
+    var text: String
+    var placeholder: String
+    var isFirstResponder: Bool
+}

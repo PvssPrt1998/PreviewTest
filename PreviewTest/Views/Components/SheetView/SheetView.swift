@@ -22,7 +22,7 @@ struct SheetView<Content: View>: View {
                 }
             }
             .padding(.horizontal, 16)
-            .background(Color.darkBlue1)
+            .background(Color.bgSecond)
             .cornerRadius(20, corners: [.topLeft, .topRight])
             .padding(.top, paddingValuesStorage.topPadding)
             .gesture(

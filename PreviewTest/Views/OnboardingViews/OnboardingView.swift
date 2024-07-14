@@ -18,8 +18,8 @@ struct OnboardingView: View {
     
     var body: some View {
         ZStack {
-            backgroundImage(backgroundImageTitle: backgroundImageTitle,
-                            color: .darkBlue1)
+            BackgroundImage(backgroundImageTitle: backgroundImageTitle,
+                            color: .bgSecond)
             HStack {
                 VStack(alignment: .leading, spacing: 5) {
                     Spacer()

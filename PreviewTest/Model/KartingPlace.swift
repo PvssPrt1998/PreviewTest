@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct KartingPlace {
+    let pic: String
+    let title: String
+    let address: String
+}

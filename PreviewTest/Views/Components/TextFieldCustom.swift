@@ -16,12 +16,15 @@ struct TextFieldCustom: View {
     
     var body: some View {
         LegacyTextField(text: $text, isFirstResponder: $isFirstResponder)
-        //TextField("", text: $text)
             .fontCustom(size: 15, weight: .regular, color: .textFieldText)
             .background(
-                Text(isFirstResponder ? "" : placeholder)
-                    .fontCustom(size: 15, weight: .regular, color: .placeholder)
+                HStack {
+                    Text(isFirstResponder ? "" : placeholder)
+                        .fontCustom(size: 15, weight: .regular, color: .placeholder)
+                    Spacer()
+                }
             )
+            //.onTapGesture {}
             .padding(EdgeInsets(top: 11, leading: 16, bottom: 11, trailing: 0))
             .background(Color.bgLight)
             .overlay(
@@ -30,6 +33,7 @@ struct TextFieldCustom: View {
             )
             .clipShape(.rect(cornerRadius: 12))
             .frame(height: 45)
+            .onTapGesture {isFirstResponder = true}
     }
 }
 
@@ -39,7 +43,7 @@ struct TextFieldCustom_Preview: PreviewProvider {
     @State static var isFirstResponder: Bool = false
     
     static var previews: some View {
-        TextFieldCustom(text: $text, isFirstResponder: $isFirstResponder, placeholder: "Placholder")
+        TextFieldCustom(text: $text, isFirstResponder: $isFirstResponder, placeholder: "Placeholder")
             .padding(20)
             .background(Color.bgMain)
     }

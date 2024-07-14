@@ -65,12 +65,8 @@ final class UserOnboardingViewModel: ObservableObject {
         }
     }
     
-    func opacityByIndex(_ index: Int) -> Double {
-        if selection == index || selection == 2 && index == 1{
-            return 1
-        } else {
-            return 0.3
-        }
+    func colorByIndex(_ index: Int) -> Color {
+        selection == index ? Color.appSecondary : .secondaryDisabled
     }
     
     func widthByIndex(_ index: Int) -> CGFloat {

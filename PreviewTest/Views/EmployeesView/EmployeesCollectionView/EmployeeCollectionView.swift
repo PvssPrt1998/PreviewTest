@@ -9,10 +9,12 @@ import SwiftUI
 
 struct EmployeesCollectionView: View {
     
+    @ObservedObject var viewModel: EmployeesCollectionViewModel
+    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: [GridItem(.flexible(), spacing: 5), GridItem(.flexible(), spacing: 5)]) {
-                ForEach(employees, id: \.self) { employee in
+                ForEach(viewModel.employees, id: \.self) { employee in
                     EmployeeCollectionViewCell(employee: employee)
                 }
             }
@@ -21,6 +23,6 @@ struct EmployeesCollectionView: View {
 }
 
 #Preview {
-    EmployeesCollectionView()
+    EmployeesCollectionView(viewModel: EmployeesCollectionViewModel(employeesData: EmployeesData()))
         .background(Color.bgSecond)
 }

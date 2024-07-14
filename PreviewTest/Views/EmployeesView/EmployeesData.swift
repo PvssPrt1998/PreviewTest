@@ -5,14 +5,18 @@
 //  Created by Николай Щербаков on 14.07.2024.
 //
 
-import SwiftUI
+import Foundation
+import Combine
 
-struct EmployeesData: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    EmployeesData()
+final class EmployeesData: ObservableObject {
+    @Published var employees: Array<Employee> = [
+//        Employee(employeeName: "Name", position: "position", workingHours: "9:00 - 19:00"),
+//        Employee(employeeName: "Name1", position: "position", workingHours: "9:00 - 19:00"),
+//        Employee(employeeName: "Name2", position: "position", workingHours: "9:00 - 19:00"),
+//        Employee(employeeName: "Name3", position: "position", workingHours: "9:00 - 19:00"),
+//        Employee(employeeName: "Name4", position: "position", workingHours: "9:00 - 19:00"),
+//        Employee(employeeName: "Name5", position: "position", workingHours: "9:00 - 19:00"),
+//        Employee(employeeName: "Name6", position: "position", workingHours: "9:00 - 19:00"),
+//        Employee(employeeName: "Name7", position: "position", workingHours: "9:00 - 19:00")
+    ]
 }

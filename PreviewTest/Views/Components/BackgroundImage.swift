@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct backgroundImage: View {
+struct BackgroundImage: View {
     
     let backgroundImageTitle: String
     let color: Color
@@ -16,10 +16,10 @@ struct backgroundImage: View {
         Image(backgroundImageTitle)
             .resizable()
             .background(color)
-            //.ignoresSafeArea()
+            .ignoresSafeArea()
     }
 }
 
 #Preview {
-    backgroundImage(backgroundImageTitle: ImageTitles.UserOnboardingBackground1.rawValue, color: Color.darkBlue1)
+    BackgroundImage(backgroundImageTitle: ImageTitles.UserOnboardingBackground1.rawValue, color: Color.bgSecond)
 }

@@ -11,19 +11,15 @@ final class EmployeesViewContainer {
     
     let employeesData = EmployeesData()
     
-//    init(employeesData: EmployeesData) {
-//        self.employeesData = employeesData
-//    }
-    
     @ViewBuilder func employeesView() -> some View {
-        EmployeesView(container: self)
+        EmployeesView(container: self, viewModel: EmployeesViewModel(employeesData: employeesData))
     }
     
     @ViewBuilder func employeesCollectionView() -> some View {
         EmployeesCollectionView(viewModel: EmployeesCollectionViewModel(employeesData: employeesData))
     }
     
-//    @ViewBuilder func employeesEmptyView() -> some View {
-//        EmployeesEmptyView(viewModel: EmployeesEmptyViewModel())
-//    }
+    @ViewBuilder func employeeAddView() -> some View {
+        EmployeeAddView(viewModel: EmployeeAddViewModel())
+    }
 }

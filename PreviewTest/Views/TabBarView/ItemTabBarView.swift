@@ -15,9 +15,9 @@ struct ItemTabBarView: View {
     var body: some View {
         VStack {
             Image(systemName: imageTitle)
-                .font(Font(UIFont.systemFont(ofSize: 18, weight: .init(510))))
+                .font(Font(UIFont.systemFont(ofSize: 18, weight: .medium)))
             Text(text)
-                .font(Font(UIFont.systemFont(ofSize: 10, weight: .init(510))))
+                .font(Font(UIFont.systemFont(ofSize: 10, weight: .medium)))
         }
         //.environment(\.symbolVariants, .none) // используем это чтобы в TabView картинки не были закрашены
     }
@@ -28,7 +28,7 @@ struct ItemTabBarView: View {
     if #available(iOS 15.0, *) {
         ItemTabBarView(imageTitle: ImageTitles.tabItemGear.rawValue, text: "Home")
             .background {
-                Color.darkBlue
+                Color.bgMain
             }
     } else {
         ItemTabBarView(imageTitle: ImageTitles.tabItemGear.rawValue, text: "Home")

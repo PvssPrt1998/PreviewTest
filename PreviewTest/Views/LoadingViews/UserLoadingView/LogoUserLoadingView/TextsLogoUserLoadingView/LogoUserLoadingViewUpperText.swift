@@ -11,7 +11,7 @@ struct LogoUserLoadingViewUpperText: View {
     var body: some View {
         Text("ONE WAY TO")
             .font(Font(UIFont.fontWith(size: 56, weight: .black, design: .rounded)))
-            .foregroundColorCustom(.specialBlue)
+            .foregroundColorCustom(.appPrimary)
             .shadow(color: .darkBlueShadow, radius: 4.88, x: 4.82, y: 3.44)
     }
 }

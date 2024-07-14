@@ -34,7 +34,7 @@ struct UserOnboardingTabView: View {
                         HStack(spacing: 15) {
                             ForEach(0..<viewModel.indicatorElementsCount, id: \.self) { index in
                                 Capsule()
-                                    .fill(.specialLightBlue.opacity(viewModel.opacityByIndex(index)))
+                                    .fill(viewModel.colorByIndex(index))
                                     .frame(width: viewModel.widthByIndex(index), height: 8)
                             }
                             Spacer()

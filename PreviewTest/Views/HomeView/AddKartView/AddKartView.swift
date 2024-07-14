@@ -9,7 +9,9 @@ import SwiftUI
 
 struct AddKartView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        SheetView(paddingValuesStorage: SheetPaddingValuesStorage(sizeState: .defalt)) {
+            AddView(title: "Add your employees", description: "Fill in the information", buttonTitle: "title", showBackground: true, action: {})
+        }
     }
 }
 

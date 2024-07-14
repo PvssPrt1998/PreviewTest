@@ -16,4 +16,8 @@ enum ImageTitles: String {
     case UserOnboardingBackground1
     case UserOnboardingBackground2
     case UserOnboardingBackground3
+    case ReviewerOnboardingBackground1
+    case ReviewerOnboardingBackground2
+    case ReviewerOnboardingBackground3
+    case AppLogo
 }

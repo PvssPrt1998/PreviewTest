@@ -9,22 +9,35 @@ import SwiftUI
 
 struct TitleView: View {
     
+    enum TitlePlacement {
+        case leading
+        case center
+    }
+    
     let text: String
+    let titlePlacement: TitlePlacement
+    
+    var isCenter: Bool {
+        titlePlacement == .center ? true : false
+    }
+    
+    var size: CGFloat {
+        isCenter ? 17 : 34
+    }
+    
+    var weight: UIFont.Weight {
+        isCenter ? .semibold : .bold
+    }
     
     var body: some View {
         HStack {
-            VStack {
-                Text(text)
-                    .font(.system(size: 34, weight: .bold))
-                    .foregroundColorCustom(.white)
-                Spacer()
-            }
+            if isCenter { Spacer() }
+            TextCustom(text: text, size: size , weight: weight, color: .white)
             Spacer()
         }
-        .padding(EdgeInsets(top: 3, leading: 16, bottom: 8, trailing: 16))
     }
 }
 
 #Preview {
-    TitleView(text: "Employee")
+    TitleView(text: "Employee", titlePlacement: .leading)
 }

@@ -8,11 +8,42 @@
 import SwiftUI
 
 struct RepairView: View {
+    
+    weak var container: RepairViewContainer?
+    
+    @ObservedObject var viewModel: RepairViewModel
+    
+    @State var showAddRepairView: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        BackgroundContainerView {
+            VStack(spacing: 20) {
+                RepairTotalCostView(value: 10) {
+                    
+                }
+                VStack(spacing: 10) {
+                    HStack {
+                        TextCustom(text: "Repair", size: 20, weight: .semibold, color: .textFieldText)
+                        Spacer()
+                    }
+                    repairTableView()
+                }
+            }
+            .sheet(isPresented: $showAddRepairView, content: {
+                container?.repairAddView()
+            })
+        }
+    }
+    
+    @ViewBuilder private func repairTableView() -> some View {
+        if viewModel.repairsExists {
+            container?.repairTableView()
+        } else {
+            RepairEmptyView(showAddRepairView: $showAddRepairView)
+        }
     }
 }
 
 #Preview {
-    RepairView()
+    RepairViewContainer().repairView()
 }

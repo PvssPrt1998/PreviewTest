@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct KartCollectionView: View {
+    
+    private let karts = [
+        Kart(pic: "car", title: "title1", quantity: 1, maxSpeed: 1),
+        Kart(pic: "car", title: "title2", quantity: 1, maxSpeed: 1),
+        Kart(pic: "car", title: "title3", quantity: 1, maxSpeed: 1),
+        Kart(pic: "car", title: "title4", quantity: 1, maxSpeed: 1),
+        Kart(pic: "car", title: "title5", quantity: 1, maxSpeed: 1),
+        Kart(pic: "car", title: "title6", quantity: 1, maxSpeed: 1),
+        Kart(pic: "car", title: "title7", quantity: 1, maxSpeed: 1)
+    ]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVGrid(columns: [GridItem(.flexible(), spacing: 5), GridItem(.flexible(), spacing: 5)]) {
+                ForEach(karts, id: \.self) { kart in
+                    KartCollectionViewCell(kart: kart)
+                }
+            }
+        }
     }
 }
 

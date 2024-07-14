@@ -10,8 +10,8 @@ import SwiftUI
 struct TabBarView: View {
     
     init() {
-        UITabBar.appearance().backgroundColor = .darkBlue
-        UITabBar.appearance().unselectedItemTintColor = .specialGray
+        UITabBar.appearance().backgroundColor = .bgMain
+        UITabBar.appearance().unselectedItemTintColor = .textTertiary
     }
     
     var body: some View {
@@ -33,7 +33,7 @@ struct TabBarView: View {
                     ItemTabBarView(imageTitle: ImageTitles.tabItemGear.rawValue, text: "Settings")
                 }
         }
-        .tintCustom(.specialLightBlue)
+        .tintCustom(.appSecondary)
     }
 }
 

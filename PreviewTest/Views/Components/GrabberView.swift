@@ -9,10 +9,17 @@ import SwiftUI
 
 struct GrabberView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Color.textTertiary
+            .opacity(0.12)
+            .frame(width: 40, height: 5)
+            .clipShape(.rect(cornerRadius: 19))
+        
     }
 }
 
 #Preview {
     GrabberView()
+        .padding(100)
+        .background(Color.bgSecond)
+    
 }
