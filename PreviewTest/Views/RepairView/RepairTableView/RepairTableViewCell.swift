@@ -29,6 +29,7 @@ struct RepairTableViewCell: View {
                     Spacer()
                     Spacer()
                     Spacer()
+                    Spacer()
                     ZStack {
                         TextCustom(text: "$\(max)", size: 17, weight: .semibold, color: .textMain)
                             .multilineTextAlignment(.center)
