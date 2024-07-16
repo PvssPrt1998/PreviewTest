@@ -26,9 +26,7 @@ struct AddView: View {
                 Button {
                     action()
                 } label: {
-                    Text(buttonTitle)
-                        .font(.system(size: 15, weight: .regular))
-                        .foregroundColorCustom(.white)
+                    TextCustom(text: buttonTitle, size: 15, weight: .regular, color: .white)
                         .padding(EdgeInsets(top: 7, leading: 14, bottom: 7, trailing: 14))
                         .background(Color.appPrimary)
                         .clipShape(.rect(cornerRadius: 40))

@@ -19,9 +19,7 @@ struct NextButton: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Text("Next")
-                        .font(.system(size: 14, weight: .bold))
-                        .foregroundColorCustom(.white)
+                    TextCustom(text: "Next", size: 14, weight: .bold, color: .white)
                     Spacer()
                 }
                 Spacer()

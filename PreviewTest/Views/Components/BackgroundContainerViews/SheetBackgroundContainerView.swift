@@ -16,7 +16,7 @@ struct SheetBackgroundContainerView<Content: View>: View {
     
     var body: some View {
         ZStack {
-            Color.bgSecond.ignoresSafeArea()
+            Color.bgSecond.ignoresSafeArea(.container, edges: .top)
             VStack {
                 GrabberView()
                     .padding(5)

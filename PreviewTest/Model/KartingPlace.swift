@@ -8,7 +8,7 @@
 import Foundation
 
 struct KartingPlace {
-    let pic: String
+    let pic: Data
     let title: String
     let address: String
 }

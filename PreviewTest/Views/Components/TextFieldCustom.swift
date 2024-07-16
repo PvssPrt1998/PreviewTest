@@ -18,22 +18,27 @@ struct TextFieldCustom: View {
         LegacyTextField(text: $text, isFirstResponder: $isFirstResponder)
             .fontCustom(size: 15, weight: .regular, color: .textFieldText)
             .background(
-                HStack {
-                    Text(isFirstResponder ? "" : placeholder)
-                        .fontCustom(size: 15, weight: .regular, color: .placeholder)
-                    Spacer()
-                }
+                placeholderView()
             )
-            //.onTapGesture {}
             .padding(EdgeInsets(top: 11, leading: 16, bottom: 11, trailing: 0))
             .background(Color.bgLight)
             .overlay(
                     RoundedRectangle(cornerRadius: 12)
-                        .stroke(.separator, lineWidth: 1)
+                        .stroke(.specialSeparator, lineWidth: 1)
             )
             .clipShape(.rect(cornerRadius: 12))
             .frame(height: 45)
             .onTapGesture {isFirstResponder = true}
+    }
+    
+    @ViewBuilder func placeholderView() -> some View {
+        if !isFirstResponder || text == "" {
+            Text((isFirstResponder || text != "") ? "" : placeholder)
+                .fontCustom(size: 15, weight: .regular, color: .specialPlaceholder)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        } else {
+            EmptyView()
+        }
     }
 }
 

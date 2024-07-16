@@ -22,9 +22,7 @@ struct CustomProgressView: View {
                     .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
                     .frame(width: 30, height: 30)
                     .scaleEffect(1.5, anchor: .center)
-                Text("\(Int(value * 100))%")
-                    .font(Font(UIFont.fontWith(size: 17, weight: .regular)))
-                    .foregroundColorCustom(.white)
+                TextCustom(text: "\(Int(value * 100))%", size: 17, weight: .regular, color: .white)
             }
             Spacer()
         }

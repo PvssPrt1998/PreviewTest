@@ -9,9 +9,21 @@ import SwiftUI
 
 @main
 struct PreviewTestApp: App {
+    
+    @ObservedObject var appCoordinator: AppCoordinator
+    
+    
+    init() {
+        let appContainer = AppContainer()
+        self.appCoordinator = AppCoordinator(appContainer: appContainer)
+    }
+    
+    @State var ispres = true
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            appCoordinator.build()
+                .preferredColorScheme(.dark)
         }
     }
 }
