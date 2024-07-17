@@ -11,17 +11,42 @@ final class RepairAddViewModel: ObservableObject {
     
     let repairData: RepairData
     
-    @Published var textFields: Array<TextField> = [
-        TextField(text: "", placeholder: "Enter name", isFirstResponder: false),
-        TextField(text: "", placeholder: "Enter cost", isFirstResponder: false)
-    ]
+    @Published var nameText = "" {
+        didSet {
+            allEnteredCheck()
+        }
+    }
+    @Published var costText = "" {
+        didSet {
+            costValidate(oldValue: oldValue)
+            allEnteredCheck()
+        }
+    }
+    
+    var disabled: Bool = true
     
     init(repairData: RepairData) {
         self.repairData = repairData
     }
     
-    func addKartingPlace() {
-        guard let cost = Int(textFields[1].text) else { return }
-        repairData.repairs.append(Repair(title: textFields[0].text, cost: cost))
+    func addButtonPressed() {
+        guard let cost = Int(costText) else { return }
+        repairData.repairs.append(Repair(title: nameText, cost: cost))
+    }
+    
+    private func allEnteredCheck() {
+        var disabled = false
+        if nameText == "" || costText == ""{
+            disabled = true
+        }
+        self.disabled = disabled
+    }
+    
+    func costValidate(oldValue: String) {
+        if let speed = Int(costText) {
+            //add prefix $
+        } else {
+            costText = oldValue
+        }
     }
 }

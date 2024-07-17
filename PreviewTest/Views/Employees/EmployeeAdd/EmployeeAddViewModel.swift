@@ -11,20 +11,37 @@ final class EmployeeAddViewModel: ObservableObject {
     
     let employeesData: EmployeesData
     
-    @Published var textFields: Array<TextField> = [
-        TextField(text: "", placeholder: "Enter name", isFirstResponder: false),
-        TextField(text: "", placeholder: "Enter post", isFirstResponder: false),
-        TextField(text: "", placeholder: "Enter working hours", isFirstResponder: false)
-    ]
-    
-    @Published var imageTitle: String?
-    
-    init(employeesData: EmployeesData, imageTitle: String? = nil) {
-        self.employeesData = employeesData
-        self.imageTitle = imageTitle
+    @Published var nameText = "" {
+        didSet {
+            allEnteredCheck()
+        }
+    }
+    @Published var postText = "" {
+        didSet {
+            allEnteredCheck()
+        }
+    }
+    @Published var workingHoursText = "" {
+        didSet {
+            allEnteredCheck()
+        }
     }
     
-    func addKartingPlace() {
-        employeesData.employees.append(Employee(employeeName: textFields[0].text, position: textFields[1].text, workingHours: textFields[2].text))
+    var disabled: Bool = true
+    
+    init(employeesData: EmployeesData) {
+        self.employeesData = employeesData
+    }
+    
+    func addButtonPressed() {
+        employeesData.employees.append(Employee(employeeName: nameText, position: postText, workingHours: workingHoursText))
+    }
+    
+    private func allEnteredCheck() {
+        var disabled = false
+        if nameText == "" || postText == "" || workingHoursText == "" {
+            disabled = true
+        }
+        self.disabled = disabled
     }
 }

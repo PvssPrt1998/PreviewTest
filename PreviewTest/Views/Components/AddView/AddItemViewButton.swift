@@ -10,7 +10,7 @@ import SwiftUI
 struct AddItemViewButton: View {
     
     let title: String
-    @Binding var disabled: Bool
+    var disabled: Bool
     let action: () -> Void
     
     var body: some View {

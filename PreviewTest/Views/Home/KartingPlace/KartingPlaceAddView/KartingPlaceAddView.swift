@@ -14,15 +14,21 @@ struct KartingPlaceAddView: View {
     @Binding var showKartingPlaceAddView: Bool
     
     var body: some View {
-        AddItemView(title: "Edit basic information",
-                    buttonTitle: "Save",
-                    withImage: true,
-                    showSheet: $showKartingPlaceAddView, textFields: $viewModel.textFields) { imageData in
-            viewModel.addKartingPlace(imageData: imageData)
+        SheetBackgroundContainerView(title: "Edit basic information") {
+            VStack(spacing: 20) {
+                AddItemImage(imageData: $viewModel.imageData)
+                TextFieldCustom(text: $viewModel.nameText, placeholder: "Enter name")
+                    .onTapGesture {}
+                TextFieldCustom(text: $viewModel.addressText, placeholder: "Enter address")
+                    .onTapGesture {}
+                AddItemViewButton(title: "Add", disabled: viewModel.disabled) {
+                    viewModel.saveButtonPressed()
+                    showKartingPlaceAddView = false
+                }
+                Spacer()
+            }
+        }.onTapGesture {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
         }
     }
 }
-
-//#Preview {
-//    KartingPlaceAddView(viewModel: KartingPlaceAddViewModel(kartData: KartData()))
-//}

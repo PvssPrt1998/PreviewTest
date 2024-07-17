@@ -11,17 +11,35 @@ final class KartingPlaceAddViewModel: ObservableObject {
     
     let kartData: KartData
     
-    @Published var textFields: Array<TextField> = [
-        TextField(text: "", placeholder: "Enter name", isFirstResponder: false),
-        TextField(text: "", placeholder: "Enter address", isFirstResponder: false)
-    ]
+    @Published var nameText = "" {
+        didSet {
+            allEnteredCheck()
+        }
+    }
+    
+    @Published var addressText = "" {
+        didSet {
+            allEnteredCheck()
+        }
+    }
+    
+    var disabled: Bool = true
+    @Published var imageData: Data?
     
     init(kartData: KartData) {
         self.kartData = kartData
     }
     
-    func addKartingPlace(imageData: Data?) {
+    func saveButtonPressed() {
         guard let imageData = imageData else { return }
-        kartData.kartingPlace = KartingPlace(pic: imageData, title: textFields[0].text, address: textFields[1].text)
+        kartData.kartingPlace = KartingPlace(pic: imageData, title: nameText, address: addressText)
+    }
+    
+    private func allEnteredCheck() {
+        var disabled = false
+        if nameText == "" || addressText == "" {
+            disabled = true
+        }
+        self.disabled = disabled
     }
 }

@@ -12,7 +12,7 @@ struct EmptyKartView: View {
     @Binding var showAddKartView: Bool
     
     var body: some View {
-        AddView(title: "Add your employees", description: "Fill in the information", buttonTitle: "title", showBackground: true) {
+        AddView(title: "Add go-karts", description: "Manage your fleets", buttonTitle: "Add a go-kart", showBackground: true) {
             showAddKartView = true
         }
     }

@@ -10,13 +10,14 @@ import SwiftUI
 struct TextFieldCustom: View {
     
     @Binding var text: String
-    @Binding var isFirstResponder: Bool
+    @State var isFirstResponder: Bool = false
 
-    let placeholder: String
+    var placeholder: String
     
     var body: some View {
         LegacyTextField(text: $text, isFirstResponder: $isFirstResponder)
             .fontCustom(size: 15, weight: .regular, color: .textFieldText)
+            .autocorrectionDisabled(true)
             .background(
                 placeholderView()
             )
@@ -48,7 +49,7 @@ struct TextFieldCustom_Preview: PreviewProvider {
     @State static var isFirstResponder: Bool = false
     
     static var previews: some View {
-        TextFieldCustom(text: $text, isFirstResponder: $isFirstResponder, placeholder: "Placeholder")
+        TextFieldCustom(text: $text, placeholder: "Placeholder")
             .padding(20)
             .background(Color.bgMain)
     }

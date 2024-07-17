@@ -75,7 +75,6 @@
 		99C7E4652C4369EB007BF5C6 /* FontCustomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4642C4369EB007BF5C6 /* FontCustomModifier.swift */; };
 		99C7E4682C4373D3007BF5C6 /* LegacyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4672C4373D3007BF5C6 /* LegacyTextField.swift */; };
 		99C7E46B2C437BB7007BF5C6 /* AddItemViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E46A2C437BB7007BF5C6 /* AddItemViewButton.swift */; };
-		99C7E46D2C438503007BF5C6 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E46C2C438503007BF5C6 /* TextField.swift */; };
 		99C7E46F2C438C00007BF5C6 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E46E2C438C00007BF5C6 /* SettingsViewModel.swift */; };
 		99C7E4712C438DCC007BF5C6 /* SheetBackgroundContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4702C438DCC007BF5C6 /* SheetBackgroundContainerView.swift */; };
 		99C7E4742C4394EB007BF5C6 /* RepairTotalCostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4732C4394EB007BF5C6 /* RepairTotalCostView.swift */; };
@@ -178,7 +177,6 @@
 		99C7E4642C4369EB007BF5C6 /* FontCustomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontCustomModifier.swift; sourceTree = "<group>"; };
 		99C7E4672C4373D3007BF5C6 /* LegacyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyTextField.swift; sourceTree = "<group>"; };
 		99C7E46A2C437BB7007BF5C6 /* AddItemViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewButton.swift; sourceTree = "<group>"; };
-		99C7E46C2C438503007BF5C6 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		99C7E46E2C438C00007BF5C6 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		99C7E4702C438DCC007BF5C6 /* SheetBackgroundContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBackgroundContainerView.swift; sourceTree = "<group>"; };
 		99C7E4732C4394EB007BF5C6 /* RepairTotalCostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairTotalCostView.swift; sourceTree = "<group>"; };
@@ -579,7 +577,6 @@
 				99D9F7922C3F257C00CE9AD1 /* ImageTitles.swift */,
 				99C7E3F82C3FC1E9007BF5C6 /* EnvironmentValues.swift */,
 				99C7E3FC2C3FCA2D007BF5C6 /* VisualBlurView.swift */,
-				99C7E46C2C438503007BF5C6 /* TextField.swift */,
 				99ABF78F2C4567270093F877 /* UIColor+RGB.swift */,
 				99ABF7932C4575AC0093F877 /* ImagePicker.swift */,
 			);
@@ -713,7 +710,6 @@
 				99D9F77A2C3F209200CE9AD1 /* HomeView.swift in Sources */,
 				99C7E4572C434BAD007BF5C6 /* EmployeesCollectionViewModel.swift in Sources */,
 				99C7E45C2C4359BD007BF5C6 /* EmployeeAddView.swift in Sources */,
-				99C7E46D2C438503007BF5C6 /* TextField.swift in Sources */,
 				99ABF7942C4575AC0093F877 /* ImagePicker.swift in Sources */,
 				99D9F79D2C3F6EB600CE9AD1 /* ForegroundColorCustomModifier.swift in Sources */,
 				99C7E4102C40025A007BF5C6 /* LogoReviewerLoadingView.swift in Sources */,
