@@ -10,7 +10,8 @@ import SwiftUI
 struct RepairAddView: View {
     
     @ObservedObject var viewModel: RepairAddViewModel
-    @Binding var showSheet: Bool
+    
+    @EnvironmentObject var showSheet: RepairView.ShowSheetWrapper
 
     var body: some View {
         SheetBackgroundContainerView(title: "New info Repair") {
@@ -18,10 +19,14 @@ struct RepairAddView: View {
                 TextFieldCustom(text: $viewModel.nameText, placeholder: "Enter name")
                     .onTapGesture {}
                 TextFieldCustom(text: $viewModel.costText, placeholder: "Enter cost")
+                    .keyboardType(.numberPad)
+                    .onChange(of: viewModel.costText, perform: { newValue in
+                        costValidation(newValue)
+                    })
                     .onTapGesture {}
                 AddItemViewButton(title: "Add", disabled: viewModel.disabled) {
                     viewModel.addButtonPressed()
-                    showSheet = false
+                    showSheet.showSheet = false
                 }
                 Spacer()
             }
@@ -29,12 +34,21 @@ struct RepairAddView: View {
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
         }
     }
+    
+    private func costValidation(_ newValue: String) {
+        var filtered = newValue.filter { Set("0123456789").contains($0) }
+        
+        if filtered != "" {
+            viewModel.costText = "$" + filtered
+        } else {
+            viewModel.costText = ""
+        }
+    }
 }
 
 struct RepairAddView_Preview: PreviewProvider {
-    @State static var showSheet = true
     
     static var previews: some View {
-        RepairAddView(viewModel: RepairAddViewModel(repairData: RepairData()), showSheet: $showSheet)
+        RepairAddView(viewModel: RepairAddViewModel(repairData: RepairData(dataManager: DataManager())))
     }
 }

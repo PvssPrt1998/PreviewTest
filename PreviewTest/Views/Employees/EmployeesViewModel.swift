@@ -16,7 +16,7 @@ final class EmployeesViewModel: ObservableObject {
         employeesData.employees.count > 0
     }
     
-    var employeesDataCancellable: AnyCancellable?
+    private var employeesDataCancellable: AnyCancellable?
     
     init(employeesData: EmployeesData) {
         self.employeesData = employeesData

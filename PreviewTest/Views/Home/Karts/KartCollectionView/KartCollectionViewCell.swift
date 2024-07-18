@@ -32,7 +32,7 @@ struct KartCollectionViewCell: View {
                     HStack {
                         TextCustom(text: "Maximum speed", size: 12, weight: .regular, color: .textTertiary)
                         Spacer()
-                        TextCustom(text: "\(kart.maxSpeed)", size: 12, weight: .regular, color: .white)
+                        TextCustom(text: "\(kart.maxSpeed) km/h.", size: 12, weight: .regular, color: .white)
                     }
                 }
             }.padding(.horizontal, 6)

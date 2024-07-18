@@ -11,8 +11,6 @@ final class RepairContainer {
     
     let repairViewModelFactory: RepairViewModelFactory
     
-    let repairData: RepairData = RepairData()
-    
     init(_ repairViewModelFactory: RepairViewModelFactory) {
         self.repairViewModelFactory = repairViewModelFactory
     }
@@ -25,8 +23,8 @@ final class RepairContainer {
         RepairTableView(viewModel: repairViewModelFactory.makrRepairTableViewModel())
     }
     
-    @ViewBuilder func repairAddView(_ showSheet: Binding<Bool>) -> some View {
-        RepairAddView(viewModel: repairViewModelFactory.makeRepairAddViewModel(), showSheet: showSheet)
+    @ViewBuilder func repairAddView() -> some View {
+        RepairAddView(viewModel: repairViewModelFactory.makeRepairAddViewModel())
     }
 }
 

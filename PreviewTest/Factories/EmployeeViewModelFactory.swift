@@ -9,16 +9,22 @@ import Foundation
 
 final class EmployeeViewModelFactory {
     
+    let employeesData: EmployeesData
+    
+    init(employeesData: EmployeesData) {
+        self.employeesData = employeesData
+    }
+    
     func makeEmployeesViewModel() -> EmployeesViewModel {
-        EmployeesViewModel(employeesData: EmployeesData())
+        EmployeesViewModel(employeesData: employeesData)
     }
     
     func makeEmployeesCollectionViewModel() -> EmployeesCollectionViewModel {
-        EmployeesCollectionViewModel(employeesData: EmployeesData())
+        EmployeesCollectionViewModel(employeesData: employeesData)
     }
     
     func makeEmployeeAddViewModel() -> EmployeeAddViewModel {
-        EmployeeAddViewModel(employeesData: EmployeesData())
+        EmployeeAddViewModel(employeesData: employeesData)
     }
     
 }

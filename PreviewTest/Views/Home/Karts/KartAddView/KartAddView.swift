@@ -11,7 +11,8 @@ import Combine
 struct KartAddView: View {
     
     @ObservedObject var viewModel: KartAddViewModel
-    @Binding var showKartAddView: Bool
+    
+    @EnvironmentObject var showSheet: HomeView.ShowSheetWrapper
     
     var body: some View {
         SheetBackgroundContainerView(title: "New go-kart") {
@@ -19,20 +20,26 @@ struct KartAddView: View {
                 AddItemImage(imageData: $viewModel.imageData)
                 
                 TextFieldCustom(text: $viewModel.nameText, placeholder: "Enter name")
+                    .keyboardType(.default)
                     .onTapGesture {}
                 TextFieldCustom(text: $viewModel.quantityText, placeholder: "Enter quantity")
-                    .onReceive(Just(viewModel.quantityText), perform: { newValue in
-                        quantityValidation(newValue)
-                    })
+                    .keyboardType(.numberPad)
+                    .onReceive(Just(viewModel.quantityText)) { newValue in
+                        let filtered = newValue.filter { Set("0123456789").contains($0) }
+                        if filtered != newValue {
+                            self.viewModel.quantityText = filtered
+                        }
+                    }
                     .onTapGesture {}
                 TextFieldCustom(text: $viewModel.speedText, placeholder: "Enter maximum speed")
-                    .onReceive(Just(viewModel.speedText), perform: { newValue in
+                    .keyboardType(.numberPad)
+                    .onChange(of: viewModel.speedText, perform: { newValue in
                         speedValidation(newValue)
                     })
                     .onTapGesture {}
                 AddItemViewButton(title: "Add", disabled: viewModel.disabled) {
                     viewModel.addButtonPressed()
-                    showKartAddView = false
+                    showSheet.showSheet = false
                 }
                 Spacer()
             }
@@ -49,14 +56,15 @@ struct KartAddView: View {
     }
     
     private func speedValidation(_ newValue: String) {
-        let str = newValue.replacingOccurrences(of: " km/h.", with: "")
-        let filtered = str.filter { Set("0123456789").contains($0) }
-        var postfix = ""
-        if newValue != "" { postfix = " km/h."}
-//        if filtered != newValue {
-//            self.viewModel.speedText = filtered + postfix
-//        } else {
-//            self.viewModel.speedText = newValue + postfix
-//        }
+        var filtered = newValue.filter { Set("0123456789").contains($0) }
+        let newValuePostfixFilter = newValue.filter{ Set(" km/h.").contains($0) }
+        if newValuePostfixFilter != "" && !newValue.contains(" km/h.") {
+            filtered.removeLast()
+        }
+        if filtered != "" {
+            viewModel.speedText = filtered + " km/h."
+        } else {
+            viewModel.speedText = ""
+        }
     }
 }

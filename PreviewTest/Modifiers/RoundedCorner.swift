@@ -27,7 +27,7 @@ extension View {
     }
     
     func cornerRadius(_ radius: CGFloat, firstOrLastElement isFirst: Bool?) -> some View {
-        guard let isFirst = isFirst else { return cornerRadius(0, corners: []) }
+        guard let isFirst = isFirst else { return cornerRadius(radius, corners: [.allCorners]) }
         if isFirst {
             return cornerRadius(radius, corners: [.topLeft, .topRight])
         } else {

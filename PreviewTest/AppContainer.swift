@@ -10,14 +10,15 @@ import SwiftUI
 final class AppContainer {
     let viewModelFactory: ViewModelFactory
     let mainViewContainer: MainContainer
+    let dataManager = DataManager()
     
     init() {
-        viewModelFactory = ViewModelFactory()
+        viewModelFactory = ViewModelFactory(dataManager: dataManager)
         mainViewContainer = MainContainer(viewModelFactory)
     }
     
-    func loadingView() -> ReviewerLoadingView {
-        ReviewerLoadingView()
+    func loadingView(_ viewModel: LoadingViewModel) -> ReviewerLoadingView {
+        ReviewerLoadingView(viewModel: viewModel)
     }
     
     func onboardingView() -> ReviewerOnboardingView {

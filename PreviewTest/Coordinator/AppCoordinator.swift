@@ -38,8 +38,9 @@ final class AppCoordinator: ObservableObject {
     }
     
     private func loadingView() -> some View {
-        let view = appContainer.loadingView()
-        bind(view)
+        let viewModel = appContainer.viewModelFactory.makeLoadingViewModel()
+        bind(viewModel)
+        let view = appContainer.loadingView(viewModel)
         return view
     }
     
@@ -53,12 +54,20 @@ final class AppCoordinator: ObservableObject {
         appContainer.mainView()
     }
     
-    private func bind(_ view: ReviewerLoadingView) {
-        dictionaryAnyCancellable[.loading] = view.loaded
+    private func bind(_ viewModel: LoadingViewModel) {
+        
+        dictionaryAnyCancellable[.loading] = viewModel.loaded
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
             self?.page = .onboarding
         }
+        
+        
+//        dictionaryAnyCancellable[.loading] = view.loaded
+//            .receive(on: DispatchQueue.main)
+//            .sink { [weak self] _ in
+//            self?.page = .onboarding
+//        }
     }
     
     private func bind(_ viewModel: ReviewerOnboardingViewModel) {

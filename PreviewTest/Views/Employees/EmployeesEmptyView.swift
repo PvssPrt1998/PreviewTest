@@ -9,20 +9,18 @@ import SwiftUI
 
 struct EmployeesEmptyView: View {
     
-    @Binding var showAddEmployeeView: Bool
+    @EnvironmentObject var showSheet: EmployeesView.ShowSheetWrapper
     
     var body: some View {
         AddView(title: "Add your employees", description: "fill in the information", buttonTitle: "Add employee", showBackground: true) {
-            showAddEmployeeView = true
+            showSheet.showSheet = true
         }
     }
 }
 
 struct EmployeesEmptyView_Preview: PreviewProvider {
     
-    @State static var showAddEmployeeView: Bool = false
-    
     static var previews: some View {
-        EmployeesEmptyView(showAddEmployeeView: $showAddEmployeeView)
+        EmployeesEmptyView()
     }
 }

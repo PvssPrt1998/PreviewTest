@@ -28,6 +28,22 @@
 		99ABF7902C4567270093F877 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF78F2C4567270093F877 /* UIColor+RGB.swift */; };
 		99ABF7922C456BEF0093F877 /* AddItemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7912C456BEF0093F877 /* AddItemImage.swift */; };
 		99ABF7942C4575AC0093F877 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7932C4575AC0093F877 /* ImagePicker.swift */; };
+		99ABF7992C47ABB90093F877 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7982C47ABB90093F877 /* DataManager.swift */; };
+		99ABF79B2C47ABC10093F877 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF79A2C47ABC10093F877 /* LocalStorage.swift */; };
+		99ABF79E2C47ABEC0093F877 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF79D2C47ABEC0093F877 /* CoreDataStack.swift */; };
+		99ABF7A12C47AC440093F877 /* SmartKarting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF79F2C47AC440093F877 /* SmartKarting.xcdatamodeld */; };
+		99ABF7A32C490ABB0093F877 /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7A22C490ABB0093F877 /* TextFieldAlert.swift */; };
+		99ABF7AE2C491EDD0093F877 /* RepairTotalCostCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7A42C491EDD0093F877 /* RepairTotalCostCoreData+CoreDataClass.swift */; };
+		99ABF7AF2C491EDD0093F877 /* RepairTotalCostCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7A52C491EDD0093F877 /* RepairTotalCostCoreData+CoreDataProperties.swift */; };
+		99ABF7B02C491EDD0093F877 /* KartCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7A62C491EDD0093F877 /* KartCoreData+CoreDataClass.swift */; };
+		99ABF7B12C491EDD0093F877 /* KartCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7A72C491EDD0093F877 /* KartCoreData+CoreDataProperties.swift */; };
+		99ABF7B22C491EDD0093F877 /* EmployeeCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7A82C491EDD0093F877 /* EmployeeCoreData+CoreDataClass.swift */; };
+		99ABF7B32C491EDD0093F877 /* EmployeeCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7A92C491EDD0093F877 /* EmployeeCoreData+CoreDataProperties.swift */; };
+		99ABF7B42C491EDD0093F877 /* KartingPlaceCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7AA2C491EDD0093F877 /* KartingPlaceCoreData+CoreDataClass.swift */; };
+		99ABF7B52C491EDD0093F877 /* KartingPlaceCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7AB2C491EDD0093F877 /* KartingPlaceCoreData+CoreDataProperties.swift */; };
+		99ABF7B62C491EDD0093F877 /* RepairCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7AC2C491EDD0093F877 /* RepairCoreData+CoreDataClass.swift */; };
+		99ABF7B72C491EDD0093F877 /* RepairCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7AD2C491EDD0093F877 /* RepairCoreData+CoreDataProperties.swift */; };
+		99ABF7BA2C4928950093F877 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABF7B92C4928950093F877 /* LoadingViewModel.swift */; };
 		99C7E3E62C3F938E007BF5C6 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E3E52C3F938E007BF5C6 /* CustomProgressView.swift */; };
 		99C7E3E82C3F9FB6007BF5C6 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E3E72C3F9FB6007BF5C6 /* ContentViewModel.swift */; };
 		99C7E3EC2C3FA41B007BF5C6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E3EB2C3FA41B007BF5C6 /* OnboardingView.swift */; };
@@ -65,7 +81,6 @@
 		99C7E44B2C433B53007BF5C6 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E44A2C433B52007BF5C6 /* Employee.swift */; };
 		99C7E44D2C433F4B007BF5C6 /* TextCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E44C2C433F4B007BF5C6 /* TextCustom.swift */; };
 		99C7E44F2C43471B007BF5C6 /* EmployeesEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E44E2C43471B007BF5C6 /* EmployeesEmptyView.swift */; };
-		99C7E4522C434A19007BF5C6 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4512C434A19007BF5C6 /* AddItemView.swift */; };
 		99C7E4542C434B1F007BF5C6 /* EmployeesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4532C434B1E007BF5C6 /* EmployeesData.swift */; };
 		99C7E4572C434BAD007BF5C6 /* EmployeesCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4562C434BAD007BF5C6 /* EmployeesCollectionViewModel.swift */; };
 		99C7E45A2C4352CE007BF5C6 /* BackgroundContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4592C4352CE007BF5C6 /* BackgroundContainerView.swift */; };
@@ -73,7 +88,6 @@
 		99C7E45F2C435A00007BF5C6 /* EmployeeAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E45E2C435A00007BF5C6 /* EmployeeAddViewModel.swift */; };
 		99C7E4612C435F69007BF5C6 /* TextFieldCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4602C435F69007BF5C6 /* TextFieldCustom.swift */; };
 		99C7E4652C4369EB007BF5C6 /* FontCustomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4642C4369EB007BF5C6 /* FontCustomModifier.swift */; };
-		99C7E4682C4373D3007BF5C6 /* LegacyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4672C4373D3007BF5C6 /* LegacyTextField.swift */; };
 		99C7E46B2C437BB7007BF5C6 /* AddItemViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E46A2C437BB7007BF5C6 /* AddItemViewButton.swift */; };
 		99C7E46F2C438C00007BF5C6 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E46E2C438C00007BF5C6 /* SettingsViewModel.swift */; };
 		99C7E4712C438DCC007BF5C6 /* SheetBackgroundContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4702C438DCC007BF5C6 /* SheetBackgroundContainerView.swift */; };
@@ -130,6 +144,22 @@
 		99ABF78F2C4567270093F877 /* UIColor+RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
 		99ABF7912C456BEF0093F877 /* AddItemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemImage.swift; sourceTree = "<group>"; };
 		99ABF7932C4575AC0093F877 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		99ABF7982C47ABB90093F877 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		99ABF79A2C47ABC10093F877 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		99ABF79D2C47ABEC0093F877 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		99ABF7A02C47AC440093F877 /* SmartKarting.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartKarting.xcdatamodel; sourceTree = "<group>"; };
+		99ABF7A22C490ABB0093F877 /* TextFieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
+		99ABF7A42C491EDD0093F877 /* RepairTotalCostCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepairTotalCostCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		99ABF7A52C491EDD0093F877 /* RepairTotalCostCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepairTotalCostCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		99ABF7A62C491EDD0093F877 /* KartCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KartCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		99ABF7A72C491EDD0093F877 /* KartCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KartCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		99ABF7A82C491EDD0093F877 /* EmployeeCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmployeeCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		99ABF7A92C491EDD0093F877 /* EmployeeCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmployeeCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		99ABF7AA2C491EDD0093F877 /* KartingPlaceCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KartingPlaceCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		99ABF7AB2C491EDD0093F877 /* KartingPlaceCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KartingPlaceCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		99ABF7AC2C491EDD0093F877 /* RepairCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepairCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		99ABF7AD2C491EDD0093F877 /* RepairCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepairCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		99ABF7B92C4928950093F877 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
 		99C7E3E52C3F938E007BF5C6 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		99C7E3E72C3F9FB6007BF5C6 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		99C7E3EB2C3FA41B007BF5C6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -167,7 +197,6 @@
 		99C7E44A2C433B52007BF5C6 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		99C7E44C2C433F4B007BF5C6 /* TextCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCustom.swift; sourceTree = "<group>"; };
 		99C7E44E2C43471B007BF5C6 /* EmployeesEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesEmptyView.swift; sourceTree = "<group>"; };
-		99C7E4512C434A19007BF5C6 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		99C7E4532C434B1E007BF5C6 /* EmployeesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesData.swift; sourceTree = "<group>"; };
 		99C7E4562C434BAD007BF5C6 /* EmployeesCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesCollectionViewModel.swift; sourceTree = "<group>"; };
 		99C7E4592C4352CE007BF5C6 /* BackgroundContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundContainerView.swift; sourceTree = "<group>"; };
@@ -175,7 +204,6 @@
 		99C7E45E2C435A00007BF5C6 /* EmployeeAddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAddViewModel.swift; sourceTree = "<group>"; };
 		99C7E4602C435F69007BF5C6 /* TextFieldCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustom.swift; sourceTree = "<group>"; };
 		99C7E4642C4369EB007BF5C6 /* FontCustomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontCustomModifier.swift; sourceTree = "<group>"; };
-		99C7E4672C4373D3007BF5C6 /* LegacyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyTextField.swift; sourceTree = "<group>"; };
 		99C7E46A2C437BB7007BF5C6 /* AddItemViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewButton.swift; sourceTree = "<group>"; };
 		99C7E46E2C438C00007BF5C6 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		99C7E4702C438DCC007BF5C6 /* SheetBackgroundContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBackgroundContainerView.swift; sourceTree = "<group>"; };
@@ -279,6 +307,46 @@
 			path = KartingPlaceView;
 			sourceTree = "<group>";
 		};
+		99ABF7972C47ABA90093F877 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				99ABF7982C47ABB90093F877 /* DataManager.swift */,
+				9921FE872C4527A000D51E28 /* KartData.swift */,
+				99C7E4532C434B1E007BF5C6 /* EmployeesData.swift */,
+				99C7E4802C43A2A5007BF5C6 /* RepairData.swift */,
+				99ABF79C2C47ABDA0093F877 /* LocalStorage */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		99ABF79C2C47ABDA0093F877 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				99ABF7B82C491EEF0093F877 /* Entities */,
+				99ABF79A2C47ABC10093F877 /* LocalStorage.swift */,
+				99ABF79D2C47ABEC0093F877 /* CoreDataStack.swift */,
+				99ABF79F2C47AC440093F877 /* SmartKarting.xcdatamodeld */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		99ABF7B82C491EEF0093F877 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				99ABF7A42C491EDD0093F877 /* RepairTotalCostCoreData+CoreDataClass.swift */,
+				99ABF7A52C491EDD0093F877 /* RepairTotalCostCoreData+CoreDataProperties.swift */,
+				99ABF7A62C491EDD0093F877 /* KartCoreData+CoreDataClass.swift */,
+				99ABF7A72C491EDD0093F877 /* KartCoreData+CoreDataProperties.swift */,
+				99ABF7A82C491EDD0093F877 /* EmployeeCoreData+CoreDataClass.swift */,
+				99ABF7A92C491EDD0093F877 /* EmployeeCoreData+CoreDataProperties.swift */,
+				99ABF7AA2C491EDD0093F877 /* KartingPlaceCoreData+CoreDataClass.swift */,
+				99ABF7AB2C491EDD0093F877 /* KartingPlaceCoreData+CoreDataProperties.swift */,
+				99ABF7AC2C491EDD0093F877 /* RepairCoreData+CoreDataClass.swift */,
+				99ABF7AD2C491EDD0093F877 /* RepairCoreData+CoreDataProperties.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		99C7E3E92C3FA3FB007BF5C6 /* UserOnboardingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +388,7 @@
 		99C7E40B2C4001AF007BF5C6 /* Loadings */ = {
 			isa = PBXGroup;
 			children = (
+				99ABF7B92C4928950093F877 /* LoadingViewModel.swift */,
 				99C7E40C2C4001D5007BF5C6 /* ReviewerLoadingView */,
 				99D9F7962C3F6CA600CE9AD1 /* UserLoadingView */,
 			);
@@ -414,7 +483,6 @@
 		99C7E4692C437B7A007BF5C6 /* AddView */ = {
 			isa = PBXGroup;
 			children = (
-				99C7E4512C434A19007BF5C6 /* AddItemView.swift */,
 				99C7E46A2C437BB7007BF5C6 /* AddItemViewButton.swift */,
 				99ABF7912C456BEF0093F877 /* AddItemImage.swift */,
 			);
@@ -472,6 +540,7 @@
 				99C7E3E72C3F9FB6007BF5C6 /* ContentViewModel.swift */,
 				99D9F7692C3F1FC100CE9AD1 /* ContentView.swift */,
 				9921FE852C451B0F00D51E28 /* AppContainer.swift */,
+				99ABF7972C47ABA90093F877 /* DataManager */,
 				9921FE7A2C450CFC00D51E28 /* Factories */,
 				9921FE772C44C61E00D51E28 /* Coordinator */,
 				99D9F7752C3F206B00CE9AD1 /* Views */,
@@ -511,7 +580,6 @@
 			isa = PBXGroup;
 			children = (
 				99C7E43C2C41EF2C007BF5C6 /* HomeContainer.swift */,
-				9921FE872C4527A000D51E28 /* KartData.swift */,
 				99D9F7792C3F209200CE9AD1 /* HomeView.swift */,
 				99C7E4182C4146B3007BF5C6 /* KartingPlace */,
 				9921FE8F2C45307A00D51E28 /* Karts */,
@@ -525,7 +593,6 @@
 			isa = PBXGroup;
 			children = (
 				99C7E4422C433604007BF5C6 /* EmployeesContainer.swift */,
-				99C7E4532C434B1E007BF5C6 /* EmployeesData.swift */,
 				99D9F7822C3F20E500CE9AD1 /* EmployeesViewModel.swift */,
 				99D9F7802C3F20D700CE9AD1 /* EmployeesView.swift */,
 				99C7E44E2C43471B007BF5C6 /* EmployeesEmptyView.swift */,
@@ -539,7 +606,6 @@
 			isa = PBXGroup;
 			children = (
 				99C7E47E2C43A268007BF5C6 /* RepairContainer.swift */,
-				99C7E4802C43A2A5007BF5C6 /* RepairData.swift */,
 				99D9F7872C3F210C00CE9AD1 /* RepairViewModel.swift */,
 				99D9F7842C3F20F900CE9AD1 /* RepairView.swift */,
 				99C7E4732C4394EB007BF5C6 /* RepairTotalCostView.swift */,
@@ -607,8 +673,6 @@
 			isa = PBXGroup;
 			children = (
 				9921FE7D2C4512D000D51E28 /* TabViewImage.swift */,
-				99C7E4722C438DDC007BF5C6 /* BackgroundContainerViews */,
-				99C7E4692C437B7A007BF5C6 /* AddView */,
 				99C7E4602C435F69007BF5C6 /* TextFieldCustom.swift */,
 				99C7E44C2C433F4B007BF5C6 /* TextCustom.swift */,
 				99C7E4442C4339BB007BF5C6 /* TitleView.swift */,
@@ -618,8 +682,10 @@
 				99C7E4322C4185C9007BF5C6 /* GrabberView.swift */,
 				99C7E43A2C419C56007BF5C6 /* AddView.swift */,
 				99C7E4402C4335E9007BF5C6 /* NavigationViewContainer.swift */,
+				99C7E4692C437B7A007BF5C6 /* AddView */,
+				99C7E4722C438DDC007BF5C6 /* BackgroundContainerViews */,
 				99C7E41E2C4153CF007BF5C6 /* SheetView */,
-				99C7E4672C4373D3007BF5C6 /* LegacyTextField.swift */,
+				99ABF7A22C490ABB0093F877 /* TextFieldAlert.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -710,6 +776,7 @@
 				99D9F77A2C3F209200CE9AD1 /* HomeView.swift in Sources */,
 				99C7E4572C434BAD007BF5C6 /* EmployeesCollectionViewModel.swift in Sources */,
 				99C7E45C2C4359BD007BF5C6 /* EmployeeAddView.swift in Sources */,
+				99ABF79E2C47ABEC0093F877 /* CoreDataStack.swift in Sources */,
 				99ABF7942C4575AC0093F877 /* ImagePicker.swift in Sources */,
 				99D9F79D2C3F6EB600CE9AD1 /* ForegroundColorCustomModifier.swift in Sources */,
 				99C7E4102C40025A007BF5C6 /* LogoReviewerLoadingView.swift in Sources */,
@@ -725,7 +792,6 @@
 				99D9F76A2C3F1FC100CE9AD1 /* ContentView.swift in Sources */,
 				99D9F7832C3F20E500CE9AD1 /* EmployeesViewModel.swift in Sources */,
 				99C7E44B2C433B53007BF5C6 /* Employee.swift in Sources */,
-				99C7E4682C4373D3007BF5C6 /* LegacyTextField.swift in Sources */,
 				99C7E4652C4369EB007BF5C6 /* FontCustomModifier.swift in Sources */,
 				99C7E4062C3FFC61007BF5C6 /* StarView.swift in Sources */,
 				99C7E3EE2C3FAD56007BF5C6 /* NextButton.swift in Sources */,
@@ -734,18 +800,20 @@
 				99C7E41D2C414714007BF5C6 /* KartingPlaceView.swift in Sources */,
 				9921FE802C45171200D51E28 /* EmployeeViewModelFactory.swift in Sources */,
 				99C7E4312C418412007BF5C6 /* KartsView.swift in Sources */,
+				99ABF7A32C490ABB0093F877 /* TextFieldAlert.swift in Sources */,
 				9921FE8E2C452D6B00D51E28 /* KartCollectionViewModel.swift in Sources */,
+				99ABF79B2C47ABC10093F877 /* LocalStorage.swift in Sources */,
 				99D9F78B2C3F212E00CE9AD1 /* SettingsView.swift in Sources */,
 				99D9F7812C3F20D700CE9AD1 /* EmployeesView.swift in Sources */,
 				99C7E4542C434B1F007BF5C6 /* EmployeesData.swift in Sources */,
 				9921FE9F2C454F0000D51E28 /* KartingPlaceContainerView.swift in Sources */,
 				9921FE9D2C45464F00D51E28 /* KartingPlaceAddView.swift in Sources */,
-				99C7E4522C434A19007BF5C6 /* AddItemView.swift in Sources */,
 				99C7E45F2C435A00007BF5C6 /* EmployeeAddViewModel.swift in Sources */,
 				99C7E4712C438DCC007BF5C6 /* SheetBackgroundContainerView.swift in Sources */,
 				99C7E4812C43A2A5007BF5C6 /* RepairData.swift in Sources */,
 				99C7E4852C43B6A0007BF5C6 /* RepairAddView.swift in Sources */,
 				9921FE9B2C45464500D51E28 /* KartingPlaceAddViewModel.swift in Sources */,
+				99ABF7992C47ABB90093F877 /* DataManager.swift in Sources */,
 				99C7E4362C418C76007BF5C6 /* EmptyKartingPlaceView.swift in Sources */,
 				99D9F7A12C3F721300CE9AD1 /* UIFontExtension.swift in Sources */,
 				99C7E4832C43B64B007BF5C6 /* RepairEmptyView.swift in Sources */,
@@ -759,9 +827,11 @@
 				99C7E47B2C439DA6007BF5C6 /* RepairTableViewModel.swift in Sources */,
 				99C7E3F52C3FB8D8007BF5C6 /* UserOnboardingTabView.swift in Sources */,
 				9921FE982C45453C00D51E28 /* KartAddView.swift in Sources */,
+				99ABF7A12C47AC440093F877 /* SmartKarting.xcdatamodeld in Sources */,
 				99C7E4612C435F69007BF5C6 /* TextFieldCustom.swift in Sources */,
 				99C7E4332C4185C9007BF5C6 /* GrabberView.swift in Sources */,
 				99C7E3F72C3FBBE1007BF5C6 /* BackgroundImage.swift in Sources */,
+				99ABF7BA2C4928950093F877 /* LoadingViewModel.swift in Sources */,
 				99D9F78E2C3F21B800CE9AD1 /* MainView.swift in Sources */,
 				99C7E42F2C418397007BF5C6 /* RoundedCorner.swift in Sources */,
 				99C7E40E2C4001E4007BF5C6 /* ReviewerLoadingView.swift in Sources */,
@@ -778,6 +848,16 @@
 				99C7E4742C4394EB007BF5C6 /* RepairTotalCostView.swift in Sources */,
 				99C7E46B2C437BB7007BF5C6 /* AddItemViewButton.swift in Sources */,
 				99C7E46F2C438C00007BF5C6 /* SettingsViewModel.swift in Sources */,
+				99ABF7AE2C491EDD0093F877 /* RepairTotalCostCoreData+CoreDataClass.swift in Sources */,
+				99ABF7AF2C491EDD0093F877 /* RepairTotalCostCoreData+CoreDataProperties.swift in Sources */,
+				99ABF7B02C491EDD0093F877 /* KartCoreData+CoreDataClass.swift in Sources */,
+				99ABF7B12C491EDD0093F877 /* KartCoreData+CoreDataProperties.swift in Sources */,
+				99ABF7B22C491EDD0093F877 /* EmployeeCoreData+CoreDataClass.swift in Sources */,
+				99ABF7B32C491EDD0093F877 /* EmployeeCoreData+CoreDataProperties.swift in Sources */,
+				99ABF7B42C491EDD0093F877 /* KartingPlaceCoreData+CoreDataClass.swift in Sources */,
+				99ABF7B52C491EDD0093F877 /* KartingPlaceCoreData+CoreDataProperties.swift in Sources */,
+				99ABF7B62C491EDD0093F877 /* RepairCoreData+CoreDataClass.swift in Sources */,
+				99ABF7B72C491EDD0093F877 /* RepairCoreData+CoreDataProperties.swift in Sources */,
 				99ABF7902C4567270093F877 /* UIColor+RGB.swift in Sources */,
 				99C7E3E82C3F9FB6007BF5C6 /* ContentViewModel.swift in Sources */,
 				99C7E4392C419AE4007BF5C6 /* EmptyKartView.swift in Sources */,
@@ -1004,6 +1084,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		99ABF79F2C47AC440093F877 /* SmartKarting.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				99ABF7A02C47AC440093F877 /* SmartKarting.xcdatamodel */,
+			);
+			currentVersion = 99ABF7A02C47AC440093F877 /* SmartKarting.xcdatamodel */;
+			name = SmartKarting.xcdatamodeld;
+			path = /Users/lucifer/Documents/SwiftProjects/PreviewTest/PreviewTest/DataManager/LocalStorage/SmartKarting.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 99D9F75C2C3F1FC100CE9AD1 /* Project object */;
 }

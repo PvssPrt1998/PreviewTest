@@ -9,12 +9,12 @@ import SwiftUI
 
 struct EmptyKartingPlaceView: View {
     
-    @Binding var showAddKartingPlaceView: Bool
+    @EnvironmentObject var showSheet: HomeView.ShowSheetWrapper
     
     var body: some View {
         VStack {
             AddView(title: "Add the data", description: "Indicate basic information", buttonTitle: "Add information", showBackground: true) {
-                showAddKartingPlaceView = true
+                showSheet.showKartingPlaceSheet = true
             }
             .frame(height: 320)
             Spacer()
@@ -25,9 +25,7 @@ struct EmptyKartingPlaceView: View {
 
 struct EmptyKartingPlaceView_Preview: PreviewProvider {
     
-    @State static var show: Bool = false
-    
     static var previews: some View {
-        EmptyKartingPlaceView(showAddKartingPlaceView: $show)
+        EmptyKartingPlaceView()
     }
 }

@@ -12,30 +12,30 @@ struct ReviewerLoadingView: View {
     
     let loaded = PassthroughSubject<Bool, Never>()
     
-    @State var value: Double = 0
+    @ObservedObject var viewModel: LoadingViewModel
 
     var body: some View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
             LogoReviewerLoadingView()
-            CustomProgressView(value: $value)
+            CustomProgressView(value: $viewModel.value)
         }
-        .onAppear {
-            stroke {
-                self.value += 0.25
-                stroke {
-                    self.value += 0.25
-                    stroke {
-                        self.value += 0.25
-                        stroke {
-                            self.value += 0.25
-                            loaded.send(true)
-                        }
-                    }
-                }
-            }
-        }
+//        .onAppear {
+//            stroke {
+//                self.value += 0.25
+//                stroke {
+//                    self.value += 0.25
+//                    stroke {
+//                        self.value += 0.25
+//                        stroke {
+//                            self.value += 0.25
+//                            loaded.send(true)
+//                        }
+//                    }
+//                }
+//            }
+//        }
     }
     
     func stroke(_ completion: @escaping () -> ()) {
@@ -48,6 +48,6 @@ struct ReviewerLoadingView: View {
 struct ReviewerLoadingView_Preview: PreviewProvider {
     
     static var previews: some View {
-        ReviewerLoadingView()
+        ReviewerLoadingView(viewModel: LoadingViewModel(dataManager: DataManager()))
     }
 }

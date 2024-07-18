@@ -8,6 +8,9 @@
 import Foundation
 
 final class EmployeesData: ObservableObject {
+    
+    private weak var dataManager: DataManager?
+    
     @Published var employees: Array<Employee> = [
 //        Employee(employeeName: "Name", position: "position", workingHours: "9:00 - 19:00"),
 //        Employee(employeeName: "Name1", position: "position", workingHours: "9:00 - 19:00"),
@@ -18,4 +21,15 @@ final class EmployeesData: ObservableObject {
 //        Employee(employeeName: "Name6", position: "position", workingHours: "9:00 - 19:00"),
 //        Employee(employeeName: "Name7", position: "position", workingHours: "9:00 - 19:00")
     ]
+    
+    init(dataManager: DataManager) {
+        self.dataManager = dataManager
+    }
+    
+    func setEmployee(_ employee: Employee) {
+        DispatchQueue.main.async { [weak self] in
+            self?.dataManager?.localStorage.saveEmployee(employee)
+        }
+        self.employees.append(employee)
+    }
 }

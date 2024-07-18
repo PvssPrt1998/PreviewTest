@@ -41,5 +41,5 @@ struct KartingPlaceView: View {
 }
 
 #Preview {
-    KartingPlaceView(viewModel: KartingPlaceViewModel(kartData: KartData()))
+    KartingPlaceView(viewModel: KartingPlaceViewModel(kartData: KartData(dataManager: DataManager())))
 }

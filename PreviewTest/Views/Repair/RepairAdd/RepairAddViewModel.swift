@@ -18,7 +18,6 @@ final class RepairAddViewModel: ObservableObject {
     }
     @Published var costText = "" {
         didSet {
-            costValidate(oldValue: oldValue)
             allEnteredCheck()
         }
     }
@@ -30,8 +29,9 @@ final class RepairAddViewModel: ObservableObject {
     }
     
     func addButtonPressed() {
-        guard let cost = Int(costText) else { return }
-        repairData.repairs.append(Repair(title: nameText, cost: cost))
+        let costFiltered = costText.filter { Set("0123456789").contains($0) }
+        guard let cost = Int(costFiltered) else { return }
+        repairData.setRepair(Repair(title: nameText, cost: cost))
     }
     
     private func allEnteredCheck() {
@@ -41,12 +41,5 @@ final class RepairAddViewModel: ObservableObject {
         }
         self.disabled = disabled
     }
-    
-    func costValidate(oldValue: String) {
-        if let speed = Int(costText) {
-            //add prefix $
-        } else {
-            costText = oldValue
-        }
-    }
+
 }

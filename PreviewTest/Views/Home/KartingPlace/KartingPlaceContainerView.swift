@@ -13,8 +13,6 @@ struct KartingPlaceContainerView: View {
     
     @ObservedObject var viewModel: KartingPlaceContainerViewModel
     
-    @State var showAddKartingPlaceView = false
-    
     init(_ container: HomeContainer, viewModel: KartingPlaceContainerViewModel) {
         self.container = container
         self.viewModel = viewModel
@@ -22,16 +20,13 @@ struct KartingPlaceContainerView: View {
     
     var body: some View {
         kartingPlaceContainerView()
-            .sheet(isPresented: $showAddKartingPlaceView) {
-                container?.kartingPlaceAddView($showAddKartingPlaceView)
-            }
     }
     
     @ViewBuilder func kartingPlaceContainerView() -> some View {
         if viewModel.isKartingPlaceExists {
             container?.kartingPlaceView()
         } else {
-            EmptyKartingPlaceView(showAddKartingPlaceView: $showAddKartingPlaceView)
+            EmptyKartingPlaceView()
         }
     }
 }

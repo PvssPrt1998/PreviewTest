@@ -32,7 +32,7 @@ final class KartingPlaceAddViewModel: ObservableObject {
     
     func saveButtonPressed() {
         guard let imageData = imageData else { return }
-        kartData.kartingPlace = KartingPlace(pic: imageData, title: nameText, address: addressText)
+        kartData.setKartingPlace(KartingPlace(pic: imageData, title: nameText, address: addressText))
     }
     
     private func allEnteredCheck() {

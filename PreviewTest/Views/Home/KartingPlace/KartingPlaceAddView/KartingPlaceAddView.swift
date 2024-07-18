@@ -11,7 +11,7 @@ struct KartingPlaceAddView: View {
     
     @ObservedObject var viewModel: KartingPlaceAddViewModel
     
-    @Binding var showKartingPlaceAddView: Bool
+    @EnvironmentObject var showSheet: HomeView.ShowSheetWrapper
     
     var body: some View {
         SheetBackgroundContainerView(title: "Edit basic information") {
@@ -23,7 +23,7 @@ struct KartingPlaceAddView: View {
                     .onTapGesture {}
                 AddItemViewButton(title: "Add", disabled: viewModel.disabled) {
                     viewModel.saveButtonPressed()
-                    showKartingPlaceAddView = false
+                    showSheet.showKartingPlaceSheet = false
                 }
                 Spacer()
             }

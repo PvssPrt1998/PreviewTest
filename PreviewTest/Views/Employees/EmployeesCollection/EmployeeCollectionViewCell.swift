@@ -22,13 +22,13 @@ struct EmployeeCollectionViewCell: View {
     }
     
     @ViewBuilder func descriptionCouple(text1: String, text2: String, bottomTextColor: Color) -> some View {
-        VStack {
+        VStack(spacing: 0) {
             HStack {
                 TextCustom(text: text1, size: 17, weight: .semibold, color: .textMain)
                 Spacer()
             }
             HStack {
-                TextCustom(text: "Working hours", size: 12, weight: .regular, color: bottomTextColor)
+                TextCustom(text: text2, size: 12, weight: .regular, color: bottomTextColor)
                 Spacer()
             }
         }

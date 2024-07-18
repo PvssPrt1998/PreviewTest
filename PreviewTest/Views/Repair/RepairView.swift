@@ -13,37 +13,70 @@ struct RepairView: View {
     
     @ObservedObject var viewModel: RepairViewModel
     
-    @State var showAddRepairView: Bool = false
+    class ShowSheetWrapper: ObservableObject {
+        @Published var showSheet = false
+    }
+    
+    @State var showRepairTotalCostAlert = false
+    
+    @StateObject var showSheetWrapper = ShowSheetWrapper()
     
     var body: some View {
-        BackgroundContainerView {
-            VStack(spacing: 20) {
-                RepairTotalCostView(value: 10) {
-                    
-                }
-                VStack(spacing: 10) {
-                    HStack {
-                        TextCustom(text: "Repair", size: 20, weight: .semibold, color: .textFieldText)
-                        Spacer()
+        ZStack {
+            BackgroundContainerView {
+                VStack(spacing: 20) {
+                    RepairTotalCostView(value: viewModel.totalCost) {
+                        showRepairTotalCostAlert = true
                     }
-                    repairTableView()
+                    VStack(spacing: 10) {
+                        HStack {
+                            TextCustom(text: "Repair", size: 20, weight: .semibold, color: .textFieldText)
+                            Spacer()
+                        }
+                        repairTableView()
+                    }
+                }
+                .sheet(isPresented: $showSheetWrapper.showSheet, content: {
+                    container?.repairAddView()
+                })
+                .environmentObject(showSheetWrapper)
+            }
+            if showRepairTotalCostAlert {
+                ZStack {
+                    Color.black.opacity(0.35).ignoresSafeArea()
+                    TextFieldAlert(text: $viewModel.totalCostText) {
+                        viewModel.setTotalCost()
+                        showRepairTotalCostAlert = false
+                    }
                 }
             }
-            .sheet(isPresented: $showAddRepairView, content: {
-                container?.repairAddView($showAddRepairView)
-            })
+            VStack {
+                Spacer()
+                Divider()
+            }
         }
     }
     
     @ViewBuilder private func repairTableView() -> some View {
         if viewModel.repairsExists {
-            container?.repairTableView()
+            ZStack {
+                container?.repairTableView()
+                VStack {
+                    Spacer()
+                    AddItemViewButton(title: "Add info Repair", disabled: false) {
+                        showSheetWrapper.showSheet = true
+                    }
+                    .frame(width: 286)
+                    .padding(.bottom, 16)
+                }
+            }
+            
         } else {
-            RepairEmptyView(showAddRepairView: $showAddRepairView)
+            RepairEmptyView()
         }
     }
 }
 
 #Preview {
-    RepairContainer(RepairViewModelFactory()).repairView()
+    RepairContainer(RepairViewModelFactory(repairData: RepairData(dataManager: DataManager()))).repairView()
 }

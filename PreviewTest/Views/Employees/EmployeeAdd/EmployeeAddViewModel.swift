@@ -34,7 +34,7 @@ final class EmployeeAddViewModel: ObservableObject {
     }
     
     func addButtonPressed() {
-        employeesData.employees.append(Employee(employeeName: nameText, position: postText, workingHours: workingHoursText))
+        employeesData.setEmployee(Employee(employeeName: nameText, position: postText, workingHours: workingHoursText))
     }
     
     private func allEnteredCheck() {

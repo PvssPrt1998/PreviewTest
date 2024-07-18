@@ -9,8 +9,6 @@ import SwiftUI
 
 final class EmployeesContainer {
     
-    let employeesData = EmployeesData()
-    
     let employeeViewModelFactory: EmployeeViewModelFactory
     
     init(_ employeeViewModelFactory: EmployeeViewModelFactory) {
@@ -25,7 +23,7 @@ final class EmployeesContainer {
         EmployeesCollectionView(viewModel: employeeViewModelFactory.makeEmployeesCollectionViewModel())
     }
     
-    @ViewBuilder func employeeAddView(_ showSheet: Binding<Bool>) -> some View {
-        EmployeeAddView(viewModel: employeeViewModelFactory.makeEmployeeAddViewModel(), showSheet: showSheet)
+    @ViewBuilder func employeeAddView() -> some View {
+        EmployeeAddView(viewModel: employeeViewModelFactory.makeEmployeeAddViewModel())
     }
 }

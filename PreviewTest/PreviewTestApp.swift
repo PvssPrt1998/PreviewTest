@@ -12,7 +12,6 @@ struct PreviewTestApp: App {
     
     @ObservedObject var appCoordinator: AppCoordinator
     
-    
     init() {
         let appContainer = AppContainer()
         self.appCoordinator = AppCoordinator(appContainer: appContainer)

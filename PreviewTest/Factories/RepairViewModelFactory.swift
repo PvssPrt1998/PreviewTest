@@ -9,7 +9,11 @@ import Foundation
 
 final class RepairViewModelFactory {
     
-    let repairData = RepairData()
+    let repairData: RepairData
+    
+    init(repairData: RepairData) {
+        self.repairData = repairData
+    }
     
     func makeRepairAddViewModel() -> RepairAddViewModel {
         RepairAddViewModel(repairData: repairData)

@@ -15,8 +15,15 @@ struct RepairTableView: View {
         ScrollView(.vertical) {
             LazyVStack(spacing: 0) {
                 ForEach(0..<viewModel.repairsCount, id: \.self) { index in
-                    RepairTableViewCell(repair: viewModel.getRepair(by: index), max: viewModel.max)
-                        .cornerRadius(12, firstOrLastElement: firstOrLast(index: index))
+                    VStack(spacing: 0) {
+                        RepairTableViewCell(repair: viewModel.getRepair(by: index), max: viewModel.max)
+                            .cornerRadius(12, firstOrLastElement: firstOrLast(index: index))
+                        if index != viewModel.repairsCount - 1 && viewModel.repairsCount - 1 != 0 {
+                            Divider()
+                                .overlay(Color.bgLight)
+                                .padding(.leading, 16)
+                        }
+                    }
                 }
             }
         }
@@ -25,6 +32,9 @@ struct RepairTableView: View {
     
     private func firstOrLast(index: Int) -> Bool? {
         if index == 0 {
+            if viewModel.repairsCount - 1 == 0 {
+                return nil
+            }
             return true
         } else if index == viewModel.repairsCount - 1 {
             return false
@@ -34,7 +44,7 @@ struct RepairTableView: View {
 }
 
 #Preview {
-    RepairTableView(viewModel: RepairTableViewModel(repairData: RepairData()))
+    RepairTableView(viewModel: RepairTableViewModel(repairData: RepairData(dataManager: DataManager())))
         .padding(10)
         .background(Color.bgSecond)
 }

@@ -9,7 +9,11 @@ import Foundation
 
 final class KartViewModelFactory {
     
-    let kartData = KartData()
+    let kartData: KartData
+    
+    init(kartData: KartData) {
+        self.kartData = kartData
+    }
     
     func makeKartCollectionViewModel() -> KartCollectionViewModel {
         KartCollectionViewModel(kartData: kartData)

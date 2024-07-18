@@ -15,37 +15,32 @@ struct RepairTableViewCell: View {
     @State var centerOffset: CGFloat = 0
     
     var body: some View {
-        VStack(spacing: 0) {
-            ZStack {
-                HStack {
-                    TextCustom(text: repair.title, size: 16, weight: .regular, color: .textMain)
-                        .multilineTextAlignment(.leading)
-                    Spacer()
-                }
-                HStack {
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    ZStack {
-                        TextCustom(text: "$\(max)", size: 17, weight: .semibold, color: .textMain)
-                            .multilineTextAlignment(.center)
-                            .hidden()
-                        TextCustom(text: "$\(repair.cost)", size: 17, weight: .semibold, color: .textMain)
-                            .multilineTextAlignment(.center)
-                    }
-                    
-                    Spacer()
-                }
+        ZStack {
+            HStack {
+                TextCustom(text: repair.title, size: 16, weight: .regular, color: .textMain)
+                    .multilineTextAlignment(.leading)
+                Spacer()
             }
-            .padding(EdgeInsets(top: 19, leading: 16, bottom: 19, trailing: 0))
-            Divider()
-                .overlay(Color.bgLight)
-                .padding(.leading, 16)
+            HStack {
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                ZStack {
+                    TextCustom(text: "$\(max)", size: 17, weight: .semibold, color: .textMain)
+                        .multilineTextAlignment(.center)
+                        .hidden()
+                    TextCustom(text: "$\(repair.cost)", size: 17, weight: .semibold, color: .textMain)
+                        .multilineTextAlignment(.center)
+                }
+                
+                Spacer()
+            }
         }
+        .padding(EdgeInsets(top: 19, leading: 16, bottom: 19, trailing: 0))
         .background(Color.bgLight)
     }
 }

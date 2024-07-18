@@ -10,43 +10,37 @@ import SwiftUI
 struct TextFieldCustom: View {
     
     @Binding var text: String
-    @State var isFirstResponder: Bool = false
 
     var placeholder: String
     
     var body: some View {
-        LegacyTextField(text: $text, isFirstResponder: $isFirstResponder)
+       TextField("", text: $text)
             .fontCustom(size: 15, weight: .regular, color: .textFieldText)
             .autocorrectionDisabled(true)
+            .padding(EdgeInsets(top: 11, leading: 16, bottom: 11, trailing: 0))
             .background(
                 placeholderView()
             )
-            .padding(EdgeInsets(top: 11, leading: 16, bottom: 11, trailing: 0))
             .background(Color.bgLight)
             .overlay(
-                    RoundedRectangle(cornerRadius: 12)
-                        .stroke(.specialSeparator, lineWidth: 1)
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(.specialSeparator, lineWidth: 0.5)
             )
             .clipShape(.rect(cornerRadius: 12))
             .frame(height: 45)
-            .onTapGesture {isFirstResponder = true}
     }
     
     @ViewBuilder func placeholderView() -> some View {
-        if !isFirstResponder || text == "" {
-            Text((isFirstResponder || text != "") ? "" : placeholder)
-                .fontCustom(size: 15, weight: .regular, color: .specialPlaceholder)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        } else {
-            EmptyView()
-        }
+        Text(text != "" ? "" : placeholder)
+            .fontCustom(size: 15, weight: .regular, color: .specialPlaceholder)
+            .padding(EdgeInsets(top: 11, leading: 16, bottom: 11, trailing: 0))
+            .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
 struct TextFieldCustom_Preview: PreviewProvider {
     
     @State static var text: String = ""
-    @State static var isFirstResponder: Bool = false
     
     static var previews: some View {
         TextFieldCustom(text: $text, placeholder: "Placeholder")

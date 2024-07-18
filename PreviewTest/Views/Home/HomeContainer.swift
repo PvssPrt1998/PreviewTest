@@ -27,8 +27,8 @@ final class HomeContainer {
         KartingPlaceView(viewModel: kartViewModelFactory.makeKartingPlaceViewModel())
     }
     
-    func kartingPlaceAddView(_ showKartingPlaceAddView: Binding<Bool>) -> some View {
-        KartingPlaceAddView(viewModel: kartViewModelFactory.makeKartingPlaceAddViewModel(), showKartingPlaceAddView: showKartingPlaceAddView)
+    func kartingPlaceAddView() -> some View {
+        KartingPlaceAddView(viewModel: kartViewModelFactory.makeKartingPlaceAddViewModel())
     }
     
     func buildKartsView() -> some View {
@@ -39,9 +39,8 @@ final class HomeContainer {
         KartCollectionView(viewModel: kartViewModelFactory.makeKartCollectionViewModel())
     }
     
-    func buildKartAddView(_ showAddKartView: Binding<Bool>) -> some View {
-        KartAddView(viewModel: kartViewModelFactory.makeKartAddViewModel(), showKartAddView: showAddKartView)
+    func buildKartAddView() -> some View {
+        KartAddView(viewModel: kartViewModelFactory.makeKartAddViewModel())
     }
-    
     
 }
