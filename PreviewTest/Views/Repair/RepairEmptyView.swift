@@ -15,6 +15,7 @@ struct RepairEmptyView: View {
         AddView(title: "Add info Repair", description: "Fill out the repair expenses", buttonTitle: "Add info", showBackground: true) {
             showSheet.showSheet = true
         }
+        .frame(maxHeight: .infinity, alignment: .center)
     }
 }
 

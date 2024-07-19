@@ -61,7 +61,6 @@ final class DataManager: ObservableObject {
 //            }
             if let repairs = try? self.localStorage.fetchRepairs() {
                 self.repairs = repairs
-                print(self.value)
             }
 //            DispatchQueue.main.async {
 //                self.value += 0.25
@@ -92,6 +91,12 @@ final class DataManager: ObservableObject {
 //                self.dataLoaded = true
 //                print("dataLoaded")
 //            }
+        }
+    }
+    
+    func stroke(_ completion: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            completion()
         }
     }
 }

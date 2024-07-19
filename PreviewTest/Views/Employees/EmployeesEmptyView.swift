@@ -15,6 +15,7 @@ struct EmployeesEmptyView: View {
         AddView(title: "Add your employees", description: "fill in the information", buttonTitle: "Add employee", showBackground: true) {
             showSheet.showSheet = true
         }
+        .frame(maxHeight: .infinity, alignment: .center)
     }
 }
 

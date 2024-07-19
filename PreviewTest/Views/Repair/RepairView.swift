@@ -29,10 +29,8 @@ struct RepairView: View {
                         showRepairTotalCostAlert = true
                     }
                     VStack(spacing: 10) {
-                        HStack {
-                            TextCustom(text: "Repair", size: 20, weight: .semibold, color: .textFieldText)
-                            Spacer()
-                        }
+                        TextCustom(text: "Repair", size: 20, weight: .semibold, color: .textFieldText)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         repairTableView()
                     }
                 }
@@ -50,10 +48,7 @@ struct RepairView: View {
                     }
                 }
             }
-            VStack {
-                Spacer()
-                Divider()
-            }
+            Divider().frame(maxHeight: .infinity, alignment: .bottom)
         }
     }
     
@@ -61,14 +56,12 @@ struct RepairView: View {
         if viewModel.repairsExists {
             ZStack {
                 container?.repairTableView()
-                VStack {
-                    Spacer()
-                    AddItemViewButton(title: "Add info Repair", disabled: false) {
-                        showSheetWrapper.showSheet = true
-                    }
-                    .frame(width: 286)
-                    .padding(.bottom, 16)
+                AddItemViewButton(title: "Add info Repair", disabled: false) {
+                    showSheetWrapper.showSheet = true
                 }
+                .frame(width: 286)
+                .padding(.bottom, 16)
+                .frame(maxHeight: .infinity, alignment: .bottom)
             }
             
         } else {

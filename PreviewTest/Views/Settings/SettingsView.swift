@@ -25,10 +25,7 @@ struct SettingsView: View {
                     }
                 }
             }
-            VStack {
-                Spacer()
-                Divider()
-            }
+            Divider().frame(maxHeight: .infinity, alignment: .bottom)
         }
     }
 }

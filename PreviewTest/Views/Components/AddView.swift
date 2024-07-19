@@ -16,27 +16,23 @@ struct AddView: View {
     let action: () -> Void
     
     var body: some View {
-        VStack {
-            Spacer()
-            VStack(spacing: 17) {
-                VStack(spacing: 4) {
-                    TextCustom(text: title, size: 28, weight: .bold, color: .textMain)
-                    TextCustom(text: description, size: 16, weight: .regular, color: .textSecond)
-                }
-                Button {
-                    action()
-                } label: {
-                    TextCustom(text: buttonTitle, size: 15, weight: .regular, color: .white)
-                        .padding(EdgeInsets(top: 7, leading: 14, bottom: 7, trailing: 14))
-                        .background(Color.appPrimary)
-                        .clipShape(.rect(cornerRadius: 40))
-                }
+        VStack(spacing: 17) {
+            VStack(spacing: 4) {
+                TextCustom(text: title, size: 28, weight: .bold, color: .textMain)
+                TextCustom(text: description, size: 16, weight: .regular, color: .textSecond)
             }
-            .padding(26)
-            .background(Color.bgLight)
-            .clipShape(.rect(cornerRadius: 16))
-            Spacer()
+            Button {
+                action()
+            } label: {
+                TextCustom(text: buttonTitle, size: 15, weight: .regular, color: .white)
+                    .padding(EdgeInsets(top: 7, leading: 14, bottom: 7, trailing: 14))
+                    .background(Color.appPrimary)
+                    .clipShape(.rect(cornerRadius: 40))
+            }
         }
+        .padding(26)
+        .background(Color.bgLight)
+        .clipShape(.rect(cornerRadius: 16))
     }
 }
 

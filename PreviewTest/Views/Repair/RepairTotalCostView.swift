@@ -16,15 +16,11 @@ struct RepairTotalCostView: View {
         VStack {
             HStack {
                 VStack(spacing: 10) {
-                    HStack {
-                        TextCustom(text: "$\(value)", size: 28, weight: .bold, color: .white)
-                        Spacer()
-                    }
-                    
-                    HStack {
-                        TextCustom(text: "Total cost of repairs", size: 15, weight: .regular, color: .textNotActive)
-                        Spacer()
-                    }
+                    TextCustom(text: "$\(value)", size: 28, weight: .bold, color: .white)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                
+                    TextCustom(text: "Total cost of repairs", size: 15, weight: .regular, color: .textNotActive)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 Spacer()
                 Button {

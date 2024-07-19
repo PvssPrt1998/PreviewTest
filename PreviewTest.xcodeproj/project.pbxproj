@@ -103,7 +103,6 @@
 		99C7E4882C43B90F007BF5C6 /* RepairAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4872C43B90F007BF5C6 /* RepairAddViewModel.swift */; };
 		99C7E48A2C43BE0E007BF5C6 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4892C43BE0E007BF5C6 /* SettingsButton.swift */; };
 		99D9F7682C3F1FC100CE9AD1 /* PreviewTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D9F7672C3F1FC100CE9AD1 /* PreviewTestApp.swift */; };
-		99D9F76A2C3F1FC100CE9AD1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D9F7692C3F1FC100CE9AD1 /* ContentView.swift */; };
 		99D9F76C2C3F1FC600CE9AD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D9F76B2C3F1FC600CE9AD1 /* Assets.xcassets */; };
 		99D9F76F2C3F1FC600CE9AD1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D9F76E2C3F1FC600CE9AD1 /* Preview Assets.xcassets */; };
 		99D9F77A2C3F209200CE9AD1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D9F7792C3F209200CE9AD1 /* HomeView.swift */; };
@@ -220,7 +219,6 @@
 		99C7E4892C43BE0E007BF5C6 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
 		99D9F7642C3F1FC100CE9AD1 /* PreviewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PreviewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D9F7672C3F1FC100CE9AD1 /* PreviewTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTestApp.swift; sourceTree = "<group>"; };
-		99D9F7692C3F1FC100CE9AD1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		99D9F76B2C3F1FC600CE9AD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99D9F76E2C3F1FC600CE9AD1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		99D9F7792C3F209200CE9AD1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -538,7 +536,6 @@
 			children = (
 				99D9F7672C3F1FC100CE9AD1 /* PreviewTestApp.swift */,
 				99C7E3E72C3F9FB6007BF5C6 /* ContentViewModel.swift */,
-				99D9F7692C3F1FC100CE9AD1 /* ContentView.swift */,
 				9921FE852C451B0F00D51E28 /* AppContainer.swift */,
 				99ABF7972C47ABA90093F877 /* DataManager */,
 				9921FE7A2C450CFC00D51E28 /* Factories */,
@@ -789,7 +786,6 @@
 				99C7E3F92C3FC1E9007BF5C6 /* EnvironmentValues.swift in Sources */,
 				99C7E48A2C43BE0E007BF5C6 /* SettingsButton.swift in Sources */,
 				99C7E47D2C439DB3007BF5C6 /* Repair.swift in Sources */,
-				99D9F76A2C3F1FC100CE9AD1 /* ContentView.swift in Sources */,
 				99D9F7832C3F20E500CE9AD1 /* EmployeesViewModel.swift in Sources */,
 				99C7E44B2C433B53007BF5C6 /* Employee.swift in Sources */,
 				99C7E4652C4369EB007BF5C6 /* FontCustomModifier.swift in Sources */,

@@ -15,15 +15,8 @@ struct NextButton: View {
         Button {
             action()
         } label: {
-            VStack {
-                Spacer()
-                HStack {
-                    Spacer()
-                    TextCustom(text: "Next", size: 14, weight: .bold, color: .white)
-                    Spacer()
-                }
-                Spacer()
-            }
+            TextCustom(text: "Next", size: 14, weight: .bold, color: .white)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         }
         .frame(width: 160, height: 45)
         .background(Color.appPrimary)

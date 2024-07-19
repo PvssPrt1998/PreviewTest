@@ -21,27 +21,6 @@ struct ReviewerLoadingView: View {
             LogoReviewerLoadingView()
             CustomProgressView(value: $viewModel.value)
         }
-//        .onAppear {
-//            stroke {
-//                self.value += 0.25
-//                stroke {
-//                    self.value += 0.25
-//                    stroke {
-//                        self.value += 0.25
-//                        stroke {
-//                            self.value += 0.25
-//                            loaded.send(true)
-//                        }
-//                    }
-//                }
-//            }
-//        }
-    }
-    
-    func stroke(_ completion: @escaping () -> ()) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            completion()
-        }
     }
 }
 

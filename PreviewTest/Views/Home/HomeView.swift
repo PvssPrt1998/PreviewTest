@@ -23,10 +23,7 @@ struct HomeView: View {
             Color.bgSecond.ignoresSafeArea()
             container?.kartingPlaceContainerView()
             container?.buildKartsView()
-            VStack {
-                Spacer()
-                Divider()
-            }
+            Divider().frame(maxHeight: .infinity, alignment: .bottom)
         }
         .sheet(isPresented: $showSheetWrapper.showSheet) {
             container?.buildKartAddView()

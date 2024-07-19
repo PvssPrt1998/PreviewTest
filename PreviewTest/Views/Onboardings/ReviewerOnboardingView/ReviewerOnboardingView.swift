@@ -30,22 +30,20 @@ struct ReviewerOnboardingView: View {
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 .overlay(
-                    VStack {
-                        Spacer()
-                        HStack(spacing: 15) {
-                            ForEach(viewModel.itemsRange, id: \.self) { index in
-                                Capsule()
-                                    .fill(viewModel.colorByIndex(index))
-                                    .frame(width: viewModel.widthByIndex(index), height: 8)
-                            }
-                            Spacer()
-                            NextButton(action: {viewModel.nextButtonPressed()})
+                    HStack(spacing: 15) {
+                        ForEach(viewModel.itemsRange, id: \.self) { index in
+                            Capsule()
+                                .fill(viewModel.colorByIndex(index))
+                                .frame(width: viewModel.widthByIndex(index), height: 8)
                         }
+                        Spacer()
+                        NextButton(action: {viewModel.nextButtonPressed()})
                     }
+                    .frame(maxHeight: .infinity, alignment: .bottom)
                     .padding(EdgeInsets(top: 0,
-                                        leading: 15,
-                                        bottom: safeAreaInsets.bottom,
-                                        trailing: 15))
+                                    leading: 15,
+                                    bottom: safeAreaInsets.bottom,
+                                    trailing: 15))
                 )
             }
             .ignoresSafeArea()

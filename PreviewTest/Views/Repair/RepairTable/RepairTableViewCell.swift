@@ -16,11 +16,9 @@ struct RepairTableViewCell: View {
     
     var body: some View {
         ZStack {
-            HStack {
-                TextCustom(text: repair.title, size: 16, weight: .regular, color: .textMain)
-                    .multilineTextAlignment(.leading)
-                Spacer()
-            }
+            TextCustom(text: repair.title, size: 16, weight: .regular, color: .textMain)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
             HStack {
                 Spacer()
                 Spacer()
@@ -36,7 +34,6 @@ struct RepairTableViewCell: View {
                     TextCustom(text: "$\(repair.cost)", size: 17, weight: .semibold, color: .textMain)
                         .multilineTextAlignment(.center)
                 }
-                
                 Spacer()
             }
         }

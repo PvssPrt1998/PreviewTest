@@ -12,14 +12,12 @@ struct EmptyKartingPlaceView: View {
     @EnvironmentObject var showSheet: HomeView.ShowSheetWrapper
     
     var body: some View {
-        VStack {
-            AddView(title: "Add the data", description: "Indicate basic information", buttonTitle: "Add information", showBackground: true) {
-                showSheet.showKartingPlaceSheet = true
-            }
-            .frame(height: 320)
-            Spacer()
+        AddView(title: "Add the data", description: "Indicate basic information", buttonTitle: "Add information", showBackground: true) {
+            showSheet.showKartingPlaceSheet = true
         }
-        .ignoresSafeArea()
+        .frame(height: 320)
+        .frame(maxHeight: .infinity, alignment: .top)
+        .ignoresSafeArea(.container, edges: .vertical)
     }
 }
 

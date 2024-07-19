@@ -29,19 +29,17 @@ struct UserOnboardingTabView: View {
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 .overlay(
-                    VStack {
-                        Spacer()
-                        HStack(spacing: 15) {
-                            ForEach(0..<viewModel.indicatorElementsCount, id: \.self) { index in
-                                Capsule()
-                                    .fill(viewModel.colorByIndex(index))
-                                    .frame(width: viewModel.widthByIndex(index), height: 8)
-                            }
-                            Spacer()
-                            NextButton(action: {viewModel.selectionNext()})
+                    HStack(spacing: 15) {
+                        ForEach(0..<viewModel.indicatorElementsCount, id: \.self) { index in
+                            Capsule()
+                                .fill(viewModel.colorByIndex(index))
+                                .frame(width: viewModel.widthByIndex(index), height: 8)
                         }
-                        .blur(radius: viewModel.selection == 2 ? 3 : 0)
+                        Spacer()
+                        NextButton(action: {viewModel.selectionNext()})
                     }
+                    .blur(radius: viewModel.selection == 2 ? 3 : 0)
+                    .frame(maxHeight: .infinity, alignment: .bottom)
                     .padding(EdgeInsets(top: 0,
                                         leading: 15,
                                         bottom: safeAreaInsets.bottom,

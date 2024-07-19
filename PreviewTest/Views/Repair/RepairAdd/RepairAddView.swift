@@ -28,8 +28,7 @@ struct RepairAddView: View {
                     viewModel.addButtonPressed()
                     showSheet.showSheet = false
                 }
-                Spacer()
-            }
+            }.frame(maxHeight: .infinity, alignment: .top)
         }.onTapGesture {
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
         }

@@ -17,12 +17,9 @@ struct AddItemViewButton: View {
         Button {
             action()
         } label: {
-            HStack {
-                Spacer()
-                TextCustom(text: title, size: 17, weight: .regular, color: disabled ? Color.textNotActive : Color.white)
+            TextCustom(text: title, size: 17, weight: .regular, color: disabled ? Color.textNotActive : Color.white)
                 .padding(EdgeInsets(top: 14, leading: 20, bottom: 14, trailing: 20))
-                Spacer()
-            }
+                .frame(maxWidth: .infinity, alignment: .center)
         }
         .disabled(disabled)
         .background(disabled ? Color.textNotActive :Color.appPrimary)

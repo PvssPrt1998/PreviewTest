@@ -21,26 +21,6 @@ struct UserLoadingView: View {
             LogoUserLoadingView()
             CustomProgressView(value: $value)
         }
-        .onAppear {
-            stroke {
-                self.value += 0.25
-                stroke {
-                    self.value += 0.25
-                    stroke {
-                        self.value += 0.25
-                        stroke {
-                            self.value += 0.25
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    func stroke(_ completion: @escaping () -> ()) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            completion()
-        }
     }
 }
 

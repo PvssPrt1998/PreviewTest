@@ -23,14 +23,10 @@ struct EmployeeCollectionViewCell: View {
     
     @ViewBuilder func descriptionCouple(text1: String, text2: String, bottomTextColor: Color) -> some View {
         VStack(spacing: 0) {
-            HStack {
-                TextCustom(text: text1, size: 17, weight: .semibold, color: .textMain)
-                Spacer()
-            }
-            HStack {
-                TextCustom(text: text2, size: 12, weight: .regular, color: bottomTextColor)
-                Spacer()
-            }
+            TextCustom(text: text1, size: 17, weight: .semibold, color: .textMain)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            TextCustom(text: text2, size: 12, weight: .regular, color: bottomTextColor)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 }

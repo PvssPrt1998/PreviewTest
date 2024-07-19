@@ -24,14 +24,13 @@ struct KartCollectionView: View {
             }
             .cornerRadius(12, corners: [.topLeft, .topRight])
             
-            VStack {
-                Spacer()
-                AddItemViewButton(title: "Add a go-kart", disabled: false) {
-                    showSheet.showSheet = true
-                }
-                .frame(width: 286)
-                .padding(.bottom, 16)
+            AddItemViewButton(title: "Add a go-kart", disabled: false) {
+                showSheet.showSheet = true
             }
+            .frame(width: 286)
+            .frame(maxHeight: .infinity, alignment: .bottom)
+            .padding(.bottom, 16)
+           
         }
     }
 }

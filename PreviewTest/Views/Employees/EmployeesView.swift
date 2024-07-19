@@ -28,10 +28,7 @@ struct EmployeesView: View {
                     })
                     .environmentObject(showSheetWrapper)
             }
-            VStack {
-                Spacer()
-                Divider()
-            }
+            Divider().frame(maxHeight: .infinity, alignment: .bottom)
         }
     }
     
@@ -39,14 +36,12 @@ struct EmployeesView: View {
         if viewModel.employeesExists {
             ZStack {
                 container?.employeesCollectionView()
-                VStack {
-                    Spacer()
-                    AddItemViewButton(title: "Add employee", disabled: false) {
-                        showSheetWrapper.showSheet = true
-                    }
-                    .frame(width: 286)
-                    .padding(.bottom, 16)
+                AddItemViewButton(title: "Add employee", disabled: false) {
+                    showSheetWrapper.showSheet = true
                 }
+                .frame(width: 286)
+                .padding(.bottom, 16)
+                .frame(maxHeight: .infinity, alignment: .bottom)
             }
         } else {
             EmployeesEmptyView()

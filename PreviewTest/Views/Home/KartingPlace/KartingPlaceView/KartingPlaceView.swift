@@ -12,24 +12,26 @@ struct KartingPlaceView: View {
     @ObservedObject var viewModel: KartingPlaceViewModel
     
     var body: some View {
-        VStack {
-            ZStack {
+        ZStack {
+//            VStack {}
+//                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            VStack(alignment: .leading) {
+                TextCustom(text: viewModel.kartingPlace?.title ?? "", size: 28, weight: .bold, color: .white)
+                TextCustom(text: viewModel.kartingPlace?.address ?? "", size: 16, weight: .regular, color: .textTertiary)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+            .padding(EdgeInsets(top: 0, leading: 16, bottom: 39, trailing: 16))
+            .background(
                 setImage()
-                .resizable()
-                .scaledToFit()
-                .overlay(
+                    .resizable()
+                    .scaledToFill()
+                    .overlay(
                     LinearGradient(gradient: Gradient(colors: [Color.gradient1.opacity(0), Color.gradient1.opacity(1)]), startPoint: .top, endPoint: .bottom)
                 )
-                VStack(alignment: .leading) {
-                    Spacer()
-                    TextCustom(text: viewModel.kartingPlace?.title ?? "", size: 28, weight: .bold, color: .white)
-                    TextCustom(text: viewModel.kartingPlace?.address ?? "", size: 16, weight: .regular, color: .textTertiary)
-                }.frame(maxWidth: .infinity, alignment: .leading)
-                .padding(EdgeInsets(top: 0, leading: 16, bottom: 39, trailing: 16))
-            }
-            .frame(height: 320)
-            Spacer()
+            )
         }
+        .frame(height: 320)
+        .frame(maxHeight: .infinity, alignment: .top)
         .ignoresSafeArea(.container, edges: .top)
     }
     
