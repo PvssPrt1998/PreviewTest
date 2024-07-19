@@ -42,7 +42,7 @@ struct ReviewerOnboardingView: View {
                     .frame(maxHeight: .infinity, alignment: .bottom)
                     .padding(EdgeInsets(top: 0,
                                     leading: 15,
-                                    bottom: safeAreaInsets.bottom,
+                                    bottom: safeAreaInsets.bottom + 10,
                                     trailing: 15))
                 )
             }

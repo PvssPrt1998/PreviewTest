@@ -18,7 +18,12 @@ struct ReviewerLoadingView: View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
-            LogoReviewerLoadingView()
+            //LogoReviewerLoadingView()
+            Image("LoadingScreenLogo")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 340)
+                .padding(.bottom, 182)
             CustomProgressView(value: $viewModel.value)
         }
     }

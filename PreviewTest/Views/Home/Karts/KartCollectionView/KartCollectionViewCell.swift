@@ -23,6 +23,7 @@ struct KartCollectionViewCell: View {
                 .clipShape(.rect(cornerRadius: 8))
             VStack(spacing: 16) {
                 TextCustom(text: kart.title, size: 15, weight: .semibold, color: .white)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 VStack(spacing: 8) {
                     HStack {
                         TextCustom(text: "Quantity", size: 12, weight: .regular, color: .textTertiary)

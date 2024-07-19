@@ -24,7 +24,7 @@ struct RepairView: View {
     var body: some View {
         ZStack {
             BackgroundContainerView {
-                VStack(spacing: 20) {
+                VStack(spacing: spacingDevice()) {
                     RepairTotalCostView(value: viewModel.totalCost) {
                         showRepairTotalCostAlert = true
                     }
@@ -50,6 +50,13 @@ struct RepairView: View {
             }
             Divider().frame(maxHeight: .infinity, alignment: .bottom)
         }
+    }
+    
+    func spacingDevice() -> CGFloat {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            return 50
+        }
+        return 20
     }
     
     @ViewBuilder private func repairTableView() -> some View {

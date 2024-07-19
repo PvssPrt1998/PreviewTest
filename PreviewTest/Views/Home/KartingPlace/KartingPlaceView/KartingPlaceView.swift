@@ -13,8 +13,6 @@ struct KartingPlaceView: View {
     
     var body: some View {
         ZStack {
-//            VStack {}
-//                .frame(maxWidth: .infinity, maxHeight: .infinity)
             VStack(alignment: .leading) {
                 TextCustom(text: viewModel.kartingPlace?.title ?? "", size: 28, weight: .bold, color: .white)
                 TextCustom(text: viewModel.kartingPlace?.address ?? "", size: 16, weight: .regular, color: .textTertiary)
@@ -24,10 +22,9 @@ struct KartingPlaceView: View {
             .background(
                 setImage()
                     .resizable()
-                    .scaledToFill()
                     .overlay(
-                    LinearGradient(gradient: Gradient(colors: [Color.gradient1.opacity(0), Color.gradient1.opacity(1)]), startPoint: .top, endPoint: .bottom)
-                )
+                        LinearGradient(gradient: Gradient(colors: [Color.gradient1.opacity(0), Color.gradient1.opacity(1)]), startPoint: .top, endPoint: .bottom)
+                    )
             )
         }
         .frame(height: 320)
